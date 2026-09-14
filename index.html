@@ -543,107 +543,64 @@
                 <div class="school-picker-title">
                   <span style="font-size:1.4rem;">🏛️</span>
                   <div>
-                    <strong style="display:block;font-size:1rem;color:#09090b;font-family:var(--font-heading);">School / Institution Selection</strong>
+                    <strong style="display:block;font-size:1.05rem;color:#09090b;font-family:var(--font-heading);">School / Institution Selection</strong>
                     <span style="font-size:0.75rem;color:#64748b;font-weight:600;">Choose an enrolled school or register a new school delegation</span>
                   </div>
                 </div>
+              </div>
 
-                <!-- 2-Mode Switcher Tabs/Pills -->
-                <div class="school-mode-toggle-pills" role="tablist">
-                  <button type="button" id="btnModeExistingSchool" class="school-mode-pill active">
-                    <span>🏛️</span> Choose Existing School
-                  </button>
-                  <button type="button" id="btnModeNewSchool" class="school-mode-pill">
-                    <span>➕</span> + Add New School
-                  </button>
+              <!-- Main School Dropdown -->
+              <div class="form-group" style="margin-top:1rem;">
+                <label for="regSchoolSelect" style="font-size:0.85rem;font-weight:700;color:#334155;">
+                  Select School / Institution <span class="req">*</span>
+                </label>
+                <select id="regSchoolSelect" class="form-select-lg" style="font-size:0.95rem;padding:0.8rem 1rem;font-weight:600;" required>
+                  <option value="" disabled selected>-- Choose an Enrolled School or + Add New School --</option>
+                  <option value="__NEW_SCHOOL__" style="font-weight:700;color:#047857;">➕ + Add New School (Enter School & Principal Details)</option>
+                </select>
+              </div>
+
+              <!-- Confirmation banner when an existing school is picked -->
+              <div id="existingSchoolSelectedBanner" class="selected-school-summary-bar" style="display:none;margin-top:0.85rem;">
+                <div class="selected-summary-left">
+                  <span class="selected-badge">✓ ENROLLED SCHOOL SELECTED</span>
+                  <div id="selectedSchoolNameDisplay" class="selected-school-name">School Name</div>
+                  <span style="font-size:0.75rem;color:#047857;font-weight:600;display:block;margin-top:2px;">
+                    Principal & School details verified. Please enter Faculty & Student delegation details below.
+                  </span>
                 </div>
               </div>
 
-              <!-- Mode 1: Choose from Existing Schools -->
-              <div id="panelExistingSchool" class="school-panel">
-                <div class="school-panel-instruction">
-                  <span>👉</span> Select your school from the enrolled institutions below:
-                </div>
-
-                <!-- Selectable School Cards Grid -->
-                <div class="existing-schools-grid" id="existingSchoolsContainer">
-                  <!-- Populated dynamically by RegistrationManager.renderSchoolCards() -->
-                </div>
-
-                <!-- Quick Select Dropdown Fallback -->
-                <div class="form-group" style="margin-top:0.85rem;margin-bottom:0.25rem;">
-                  <label for="regSchoolSelect" style="font-size:0.8rem;font-weight:700;color:#475569;">Or pick from quick dropdown list:</label>
-                  <select id="regSchoolSelect" class="form-select-lg" style="font-size:0.9rem;padding:0.75rem 1rem;font-weight:600;">
-                    <option value="" disabled selected>-- Select an Enrolled School --</option>
-                  </select>
-                </div>
-
-                <!-- Direct Add New School trigger link -->
-                <div class="school-action-footer">
-                  <span>School not in the list?</span>
-                  <button type="button" id="btnSwitchToNewSchool" class="btn-link-action">
-                    <span>➕</span> Click here to Add New School
-                  </button>
-                </div>
-              </div>
-
-              <!-- Mode 2: Add New School Directly -->
-              <div id="panelNewSchool" class="school-panel" style="display:none;">
-                <div class="new-school-banner">
-                  <span class="new-school-icon">✨</span>
+              <!-- New School Details Block (ONLY SHOWN WHEN '+ Add New School' IS SELECTED) -->
+              <div id="newSchoolInputGroup" class="new-school-panel" style="display:none;margin-top:1rem;padding:1.25rem;background:#f0fdf4;border:1.5px dashed #10b981;border-radius:10px;">
+                <div class="new-school-header" style="display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem;">
+                  <span style="font-size:1.3rem;">✨</span>
                   <div>
-                    <div class="new-school-title">Registering a New School Delegation</div>
-                    <div class="new-school-desc">A dedicated tab in the Google Spreadsheet will automatically be created for this school.</div>
+                    <strong style="color:#065f46;font-size:0.95rem;font-family:var(--font-heading);display:block;">Registering New School Delegation</strong>
+                    <span style="font-size:0.75rem;color:#047857;">Enter school and principal details once. Next time, this school will be selectable directly without asking principal details!</span>
                   </div>
                 </div>
 
-                <div class="form-group" style="margin-top:1rem;">
-                  <label for="regNewSchoolName">New School Full Name & Branch / Location <span class="req">*</span></label>
-                  <input type="text" id="regNewSchoolName" placeholder="e.g. Bal Vikas School, Model Town, Panipat" autocomplete="organization" style="font-weight:600;font-size:0.95rem;padding:0.8rem 1rem;">
-                  <small style="color:var(--text-muted);font-size:0.75rem;margin-top:0.35rem;display:block;">
-                    💡 Enter the full official school name. Once submitted, it will be saved permanently in the enrolled schools list.
-                  </small>
+                <div class="form-group">
+                  <label for="regNewSchoolName">School Full Name & Branch / Location <span class="req">*</span></label>
+                  <input type="text" id="regNewSchoolName" placeholder="e.g. Bal Vikas School, Model Town, Panipat" autocomplete="organization" style="font-weight:600;font-size:0.95rem;padding:0.75rem 1rem;">
                 </div>
 
-                <div class="school-action-footer" style="margin-top:0.75rem;">
-                  <span>Want to choose an enrolled school instead?</span>
-                  <button type="button" id="btnSwitchToExistingSchool" class="btn-link-action">
-                    <span>🏛️</span> Back to Existing Schools List
-                  </button>
+                <div class="form-row-2" style="margin-top:0.75rem;">
+                  <div class="form-group">
+                    <label for="regPrincipalName">Principal / Head Name <span class="req">*</span></label>
+                    <input type="text" id="regPrincipalName" placeholder="e.g. Dr. Rajesh Khanna">
+                  </div>
+                  <div class="form-group">
+                    <label for="regSchoolPhone">School Office / Contact Phone <span class="req">*</span></label>
+                    <input type="tel" id="regSchoolPhone" placeholder="10-digit office phone" pattern="[0-9]{10}">
+                  </div>
                 </div>
-              </div>
-
-              <!-- Active Selected School Confirmation Bar -->
-              <div id="selectedSchoolSummary" class="selected-school-summary-bar" style="display:none;">
-                <div class="selected-summary-left">
-                  <span class="selected-badge">ACTIVE SELECTION</span>
-                  <div id="selectedSchoolNameDisplay" class="selected-school-name">DAV Public School</div>
-                </div>
-                <button type="button" id="btnChangeSchool" class="btn-change-school">
-                  Change ▾
-                </button>
               </div>
             </div>
 
-            <!-- School Leadership, Teachers & Students Section (Appears when School is selected) -->
-            <div id="schoolLeadershipSection" style="display:none;">
-              <!-- School Leadership Info -->
-              <div class="section-subhead-row">
-                <div class="section-subhead-title">
-                  <span>👔</span> 1. School Leadership & Office Details
-                </div>
-              </div>
-
-              <div class="form-row-2">
-                <div class="form-group">
-                  <label for="regPrincipalName">Principal Name <span class="req">*</span></label>
-                  <input type="text" id="regPrincipalName" required placeholder="e.g. Dr. Rajesh Khanna">
-                </div>
-                <div class="form-group">
-                  <label for="regSchoolPhone">School Office / Contact Number <span class="req">*</span></label>
-                  <input type="tel" id="regSchoolPhone" required placeholder="10-digit school office phone" pattern="[0-9]{10}">
-                </div>
-              </div>
+            <!-- Delegation Details Section (Appears when any school or new school is chosen) -->
+            <div id="delegationDetailsSection" style="display:none;">
 
               <!-- Slot & Day Selection -->
               <div class="form-row-2" style="margin-top:0.5rem;">

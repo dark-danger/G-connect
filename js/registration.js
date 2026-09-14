@@ -10,45 +10,10 @@
 const RegistrationManager = {
   DEFAULT_WEBHOOK_KEY: "gconnect_webhook_url",
   REGISTRATIONS_KEY: "gconnect_registrations_v2",
-  KNOWN_SCHOOLS_KEY: "gconnect_known_schools_v1",
+  KNOWN_SCHOOLS_KEY: "gconnect_known_schools_v2",
 
-  DEFAULT_KNOWN_SCHOOLS: [
-    {
-      id: "sch_1",
-      name: "DAV Public School, Sector 12, Panipat",
-      principalName: "Dr. Rajesh Khanna",
-      schoolPhone: "9812345670",
-      city: "Panipat"
-    },
-    {
-      id: "sch_2",
-      name: "Delhi Public School (DPS), Panipat",
-      principalName: "Mrs. Rohini Sen",
-      schoolPhone: "9812345688",
-      city: "Panipat"
-    },
-    {
-      id: "sch_3",
-      name: "Geeta Vidya Mandir Senior Secondary School",
-      principalName: "Sh. Suresh Goel",
-      schoolPhone: "9812345699",
-      city: "Samalkha"
-    },
-    {
-      id: "sch_4",
-      name: "St. Mary's Convent Senior Secondary School",
-      principalName: "Sr. Teresa Joseph",
-      schoolPhone: "9812345611",
-      city: "Panipat"
-    },
-    {
-      id: "sch_5",
-      name: "Government Model Senior Secondary School",
-      principalName: "Dr. Virender Malik",
-      schoolPhone: "9812345622",
-      city: "Panipat"
-    }
-  ],
+  // No hardcoded dummy schools - starts completely clean
+  DEFAULT_KNOWN_SCHOOLS: [],
 
   // State: Dynamic Teachers & Students
   teachersList: [
@@ -59,7 +24,7 @@ const RegistrationManager = {
   ],
 
   init() {
-    this.seedInitialDataIfEmpty();
+    this.cleanLegacyDummyData();
     this.populateSchoolDropdown();
     this.renderTeacherCards();
     this.renderStudentCards();
@@ -68,86 +33,24 @@ const RegistrationManager = {
     this.checkWebhookStatus();
   },
 
-  // Seed sample initial data
-  seedInitialDataIfEmpty() {
-    const existing = localStorage.getItem(this.REGISTRATIONS_KEY);
-    if (!existing || JSON.parse(existing).length === 0) {
-      const seedStudents = [
-        {
-          regId: "GC-2026-1042",
-          delegationId: "GC-SCH-9011",
-          timestamp: "2026-09-08T09:15:00.000Z",
-          participantType: "school_student",
-          fullName: "Aarav Sharma",
-          studentId: "DAV-1201",
-          phone: "9876543210",
-          email: "aarav.sharma@davpanipat.org",
-          schoolName: "DAV Public School, Sector 12, Panipat",
-          department: "DAV Public School, Sector 12, Panipat",
-          program: "12th Science (Non-Med)",
-          semester: "12th Standard",
-          section: "A",
-          day: 1,
-          slotNumber: 3,
-          slotTime: "10:30 – 11:00 AM",
-          assignedGroup: "G2",
-          checkedIn: true,
-          checkedInTime: "2026-09-08T10:22:15.000Z",
-          techInterests: ["FSD (Full Stack)", "AI & Agentic AI", "Cloud & DevOps"],
-          careerGoal: "Full-Stack Cloud Developer",
-          visitedStalls: ["fsd", "ai-agentic", "cloud-devops"]
-        },
-        {
-          regId: "GC-2026-1088",
-          delegationId: "GC-SCH-9011",
-          timestamp: "2026-09-08T09:20:00.000Z",
-          participantType: "school_student",
-          fullName: "Priya Verma",
-          studentId: "DAV-1202",
-          phone: "9812345678",
-          email: "priya.verma@davpanipat.org",
-          schoolName: "DAV Public School, Sector 12, Panipat",
-          department: "DAV Public School, Sector 12, Panipat",
-          program: "12th Science (Non-Med)",
-          semester: "12th Standard",
-          section: "A",
-          day: 1,
-          slotNumber: 3,
-          slotTime: "10:30 – 11:00 AM",
-          assignedGroup: "G2",
-          checkedIn: true,
-          checkedInTime: "2026-09-08T11:25:00.000Z",
-          techInterests: ["Cyber Security", "Quantum Computing"],
-          careerGoal: "Security Operations Analyst",
-          visitedStalls: ["cyber-security"]
-        },
-        {
-          regId: "GC-2026-FAC1",
-          delegationId: "GC-SCH-9011",
-          timestamp: "2026-09-08T09:00:00.000Z",
-          participantType: "school_faculty",
-          fullName: "Dr. Sunita Kapoor",
-          studentId: "FAC-DAV-01",
-          phone: "9871122334",
-          email: "sunita.kapoor@davpanipat.org",
-          schoolName: "DAV Public School, Sector 12, Panipat",
-          department: "DAV Public School, Sector 12, Panipat",
-          designation: "PGT Computer Science & Faculty Coordinator",
-          program: "Faculty Coordinator",
-          semester: "Faculty Lead",
-          section: "Delegation Lead",
-          day: 1,
-          slotNumber: 3,
-          slotTime: "10:30 – 11:00 AM",
-          assignedGroup: "Delegation Lead",
-          checkedIn: true,
-          checkedInTime: "2026-09-08T09:30:00.000Z",
-          techInterests: ["AI & Agentic AI", "Cloud & DevOps"],
-          careerGoal: "Faculty Mentorship & Hackathons",
-          visitedStalls: ["ai-agentic"]
+  // Clean legacy dummy schools / registrations from localStorage if present
+  cleanLegacyDummyData() {
+    try {
+      // Clean old schools list if it only had mock data
+      const oldSchoolsKey = "gconnect_known_schools_v1";
+      localStorage.removeItem(oldSchoolsKey);
+
+      // Clean known schools v2 of any legacy mock names
+      const stored = localStorage.getItem(this.KNOWN_SCHOOLS_KEY);
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (Array.isArray(parsed)) {
+          const filtered = parsed.filter(s => s && s.name && !s.name.includes("DAV Public School") && !s.name.includes("Delhi Public School") && !s.name.includes("Geeta Vidya Mandir") && !s.name.includes("St. Mary's") && !s.name.includes("Government Model"));
+          localStorage.setItem(this.KNOWN_SCHOOLS_KEY, JSON.stringify(filtered));
         }
-      ];
-      localStorage.setItem(this.REGISTRATIONS_KEY, JSON.stringify(seedStudents));
+      }
+    } catch (e) {
+      console.warn("Could not clean legacy mock schools", e);
     }
   },
 
@@ -158,12 +61,15 @@ const RegistrationManager = {
     try {
       const stored = localStorage.getItem(this.KNOWN_SCHOOLS_KEY);
       if (stored) {
-        return JSON.parse(stored);
+        const parsed = JSON.parse(stored);
+        if (Array.isArray(parsed)) {
+          return parsed.filter(s => s && s.name && !s.name.includes("DAV Public School") && !s.name.includes("Delhi Public School") && !s.name.includes("Geeta Vidya Mandir") && !s.name.includes("St. Mary's") && !s.name.includes("Government Model"));
+        }
       }
     } catch (e) {
       console.warn("Could not read known schools from storage", e);
     }
-    return [...this.DEFAULT_KNOWN_SCHOOLS];
+    return [];
   },
 
   saveKnownSchools(list) {
@@ -186,14 +92,18 @@ const RegistrationManager = {
 
     const schools = this.getKnownSchools();
 
-    let html = `<option value="" disabled ${!selectSchoolName ? 'selected' : ''}>-- Choose an Existing School or Add New School --</option>`;
+    let html = `<option value="" disabled ${!selectSchoolName ? 'selected' : ''}>-- Choose an Enrolled School or + Add New School --</option>`;
     
-    schools.forEach(sch => {
-      const isSelected = (selectSchoolName && sch.name.trim().toLowerCase() === selectSchoolName.trim().toLowerCase());
-      html += `<option value="${sch.id || sch.name}" data-name="${sch.name}" data-principal="${sch.principalName || ''}" data-phone="${sch.schoolPhone || ''}" ${isSelected ? 'selected' : ''}>🏛️ ${sch.name}</option>`;
-    });
+    if (schools.length > 0) {
+      html += `<optgroup label="Registered Enrolled Schools">`;
+      schools.forEach(sch => {
+        const isSelected = (selectSchoolName && sch.name.trim().toLowerCase() === selectSchoolName.trim().toLowerCase());
+        html += `<option value="${sch.id || sch.name}" data-name="${sch.name}" data-principal="${sch.principalName || ''}" data-phone="${sch.schoolPhone || ''}" ${isSelected ? 'selected' : ''}>🏛️ ${sch.name}</option>`;
+      });
+      html += `</optgroup>`;
+    }
 
-    html += `<option value="__NEW_SCHOOL__" style="font-weight:700;color:#047857;">➕ + Add New School (Enter New School Details)</option>`;
+    html += `<option value="__NEW_SCHOOL__" style="font-weight:700;color:#047857;">➕ + Add New School (Enter School & Principal Details)</option>`;
     
     select.innerHTML = html;
 
@@ -205,42 +115,72 @@ const RegistrationManager = {
   handleSchoolSelection() {
     const select = document.getElementById("regSchoolSelect");
     const newSchoolGroup = document.getElementById("newSchoolInputGroup");
-    const leadershipSection = document.getElementById("schoolLeadershipSection");
+    const existingBanner = document.getElementById("existingSchoolSelectedBanner");
+    const schoolDisplayName = document.getElementById("selectedSchoolNameDisplay");
+    const delegationSection = document.getElementById("delegationDetailsSection");
     const promptBox = document.getElementById("schoolSelectPrompt");
     const principalInput = document.getElementById("regPrincipalName");
     const schoolPhoneInput = document.getElementById("regSchoolPhone");
+    const newNameInput = document.getElementById("regNewSchoolName");
 
     if (!select) return;
 
     const selectedVal = select.value;
 
     if (!selectedVal) {
-      if (leadershipSection) leadershipSection.style.display = "none";
+      if (delegationSection) delegationSection.style.display = "none";
       if (newSchoolGroup) newSchoolGroup.style.display = "none";
+      if (existingBanner) existingBanner.style.display = "none";
       if (promptBox) promptBox.style.display = "block";
       return;
     }
 
     if (promptBox) promptBox.style.display = "none";
-    if (leadershipSection) leadershipSection.style.display = "block";
+    if (delegationSection) delegationSection.style.display = "block";
 
     if (selectedVal === "__NEW_SCHOOL__") {
-      if (newSchoolGroup) {
-        newSchoolGroup.style.display = "block";
-        const newNameInput = document.getElementById("regNewSchoolName");
-        if (newNameInput) {
-          newNameInput.value = "";
-          setTimeout(() => newNameInput.focus(), 50);
-        }
+      // 1. New School mode -> Show new school inputs & require Principal/School info
+      if (newSchoolGroup) newSchoolGroup.style.display = "block";
+      if (existingBanner) existingBanner.style.display = "none";
+
+      if (newNameInput) {
+        newNameInput.required = true;
+        newNameInput.value = "";
+        setTimeout(() => newNameInput.focus(), 50);
       }
-      if (principalInput) principalInput.value = "";
-      if (schoolPhoneInput) schoolPhoneInput.value = "";
+      if (principalInput) {
+        principalInput.required = true;
+        principalInput.value = "";
+      }
+      if (schoolPhoneInput) {
+        schoolPhoneInput.required = true;
+        schoolPhoneInput.value = "";
+      }
     } else {
+      // 2. Existing School mode -> Hide Principal & School details, do NOT ask for them
       if (newSchoolGroup) newSchoolGroup.style.display = "none";
+      if (existingBanner) existingBanner.style.display = "flex";
+
+      if (newNameInput) {
+        newNameInput.required = false;
+        newNameInput.value = "";
+      }
+      if (principalInput) {
+        principalInput.required = false;
+        principalInput.value = "";
+      }
+      if (schoolPhoneInput) {
+        schoolPhoneInput.required = false;
+        schoolPhoneInput.value = "";
+      }
+
       const selectedOption = select.options[select.selectedIndex];
       if (selectedOption) {
+        const schName = selectedOption.getAttribute("data-name") || selectedOption.textContent.replace(/^🏛️\s*/, '').trim();
         const principal = selectedOption.getAttribute("data-principal") || "";
         const phone = selectedOption.getAttribute("data-phone") || "";
+        
+        if (schoolDisplayName) schoolDisplayName.textContent = schName;
         if (principalInput && principal) principalInput.value = principal;
         if (schoolPhoneInput && phone) schoolPhoneInput.value = phone;
       }
@@ -513,31 +453,51 @@ const RegistrationManager = {
         return;
       }
 
+      let principalName = "";
+      let schoolPhone = "";
+
       if (schoolSelect.value === "__NEW_SCHOOL__") {
         schoolName = (document.getElementById("regNewSchoolName")?.value || "").trim();
+        principalName = (document.getElementById("regPrincipalName")?.value || "").trim();
+        schoolPhone = (document.getElementById("regSchoolPhone")?.value || "").trim();
+
         if (!schoolName) {
           this.showToast("Please enter the name of the new school.", "error");
           document.getElementById("regNewSchoolName")?.focus();
           if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = originalBtnText; }
           return;
         }
+
+        if (!principalName) {
+          this.showToast("Please enter Principal / Head Name for the new school.", "error");
+          document.getElementById("regPrincipalName")?.focus();
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = originalBtnText; }
+          return;
+        }
+
+        if (!schoolPhone || !/^[0-9]{10}$/.test(schoolPhone)) {
+          this.showToast("Please enter a valid 10-digit school office phone number.", "error");
+          document.getElementById("regSchoolPhone")?.focus();
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = originalBtnText; }
+          return;
+        }
+
+        // Persist newly registered school into Known Schools list
+        this.addKnownSchool({
+          id: "sch_" + Date.now(),
+          name: schoolName,
+          principalName,
+          schoolPhone
+        });
       } else {
         const selOption = schoolSelect.options[schoolSelect.selectedIndex];
         schoolName = selOption.getAttribute("data-name") || selOption.textContent.replace(/^🏛️\s*/, '').trim();
+        principalName = selOption.getAttribute("data-principal") || "N/A";
+        schoolPhone = selOption.getAttribute("data-phone") || "N/A";
       }
 
-      const principalName = document.getElementById("regPrincipalName").value.trim();
-      const schoolPhone = document.getElementById("regSchoolPhone").value.trim();
       const day = document.getElementById("regDay") ? parseInt(document.getElementById("regDay").value) : 1;
       const slotTime = document.getElementById("regSlot") ? document.getElementById("regSlot").value : "Slot 1 (9:30 – 10:00 AM)";
-
-      // Persist newly registered school into Known Schools list
-      this.addKnownSchool({
-        id: "sch_" + Date.now(),
-        name: schoolName,
-        principalName,
-        schoolPhone
-      });
 
       // 2. Validate Teachers
       const teacherCards = document.querySelectorAll(".teacher-entry-card");
