@@ -1,0 +1,283 @@
+/* ==========================================================================
+   GEETA UNIVERSITY & GEETA TECHNICAL HUB
+   G-CONNECT 2026 - RESPONSIVE & PRINT MEDIA STYLESHEET
+   ========================================================================== */
+
+/* Large Tablets & Small Desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-visual-card {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .zones-overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stalls-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .days-overview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .four-step-flow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reg-container-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .golden-rules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .passport-stalls-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tbf-specs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Tablets & Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .section-wrap {
+    padding: 3.5rem 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-stats-banner {
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    padding: 1rem;
+  }
+
+  .stat-banner-sep {
+    display: none;
+  }
+
+  .stat-banner-item {
+    min-width: 45%;
+  }
+
+  /* Mobile Navbar */
+  .mobile-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 1.25rem;
+    display: none;
+  }
+
+  .nav-links .nav-link {
+    color: #09090b;
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-actions button:not(.mobile-toggle),
+  .nav-actions a.btn-secondary {
+    display: none;
+  }
+
+  .stalls-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .days-overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .four-step-flow-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .participant-type-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pass-card-main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .passport-stalls-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .support-stall-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  .checkin-card-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal-card {
+    padding: 1.5rem;
+  }
+
+  .challenge-options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-stall-footer-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .footer-bottom-flex {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .hero-tagline-quote {
+    font-size: 1.05rem;
+  }
+
+  .countdown-box {
+    gap: 0.35rem;
+  }
+
+  .countdown-unit {
+    min-width: 50px;
+    padding: 0.35rem 0.5rem;
+  }
+
+  .countdown-num {
+    font-size: 1.2rem;
+  }
+
+  .passport-stalls-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .checkin-card-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pass-modal-actions {
+    flex-direction: column;
+  }
+
+  .pass-modal-actions .btn {
+    width: 100%;
+  }
+
+  .tbf-specs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   PRINT STYLES FOR DIGITAL PASS & PARTICIPATION CERTIFICATE
+   ========================================================================== */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #ticketModal.open #printablePassCard,
+  #ticketModal.open #printablePassCard * {
+    visibility: visible;
+  }
+
+  #certificateModal.open #printableCertificate,
+  #certificateModal.open #printableCertificate * {
+    visibility: visible;
+  }
+
+  #ticketModal.open #printablePassCard,
+  #certificateModal.open #printableCertificate {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    box-shadow: none;
+    border: 2px solid #000;
+    color: #000 !important;
+    background: #fff !important;
+  }
+
+  .modal-overlay {
+    position: static;
+    background: none;
+    padding: 0;
+  }
+
+  .modal-card {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    background: none;
+  }
+
+  .modal-close,
+  .pass-modal-actions,
+  .navbar,
+  .footer,
+  .ambient-glow-1,
+  .ambient-glow-2,
+  .ambient-glow-3 {
+    display: none !important;
+  }
+}

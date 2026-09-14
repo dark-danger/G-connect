@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G-Connect 2026 | Geeta University & Geeta Technical Hub</title>
+  <meta name="description" content="Official Portal for G-Connect 2026 at Geeta University (8-11 September 2026). Explore 3 Zones, 12 Themed Stalls, 44 Slots, hands-on technology exposure, student registration, and digital passport.">
+  <meta name="keywords" content="Geeta University, Geeta Technical Hub, G-Connect 2026, Explore Build Connect, Technology Expo, Career Readiness, 12 Stalls, 3 Zones, AI Agentic AI, Cyber Security, Full Stack Development, Quantum Computing">
+
+  <!-- OpenGraph / Social Media -->
+  <meta property="og:title" content="G-Connect 2026 | Geeta University & Geeta Technical Hub">
+  <meta property="og:description" content="Explore – Build – Connect. 4 Days, 3 Zones, 12 Themed Stalls, 44 Slots. Technology • Career Readiness • Opportunities.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+
+  <!-- Third Party Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+  <!-- Ambient Glowing Orbs -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  <div class="ambient-glow-3"></div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo-wrap" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <div class="logo-icon">🏛️</div>
+        <div class="logo-text">
+          <span class="brand-name">G-<span>CONNECT</span> 2026</span>
+          <span class="brand-sub">Geeta University • Geeta Technical Hub</span>
+        </div>
+      </div>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about" class="nav-link">Overview</a></li>
+          <li><a href="#zones" class="nav-link">3 Zones</a></li>
+          <li><a href="#stalls" class="nav-link">12 Stalls</a></li>
+          <li><a href="#schedule" class="nav-link">11-Slot Schedule</a></li>
+          <li><a href="#coordinators" class="nav-link">Coordinators Hub</a></li>
+          <li><a href="#faqs" class="nav-link">FAQs</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="openCheckinNavBtn" class="btn btn-secondary btn-sm" title="Stall 13 On-Campus Gate Check-in Desk">
+          <span>🔍</span> Gate Check-in (Stall 13)
+        </button>
+        <button id="openAdminModalBtn" class="btn btn-secondary btn-sm" title="Student Talent Bank & CSV Export">
+          <span>📊</span> Student Vault
+        </button>
+        <button id="openWebhookNavBtn" class="btn btn-secondary btn-sm" title="Configure Google Sheets Webhook Sync">
+          <span>⚙️</span> G-Sheet Sync
+        </button>
+        <a href="#register" class="btn btn-primary btn-sm">
+          <span>🎫</span> Register / Pass
+        </a>
+        <button class="mobile-toggle" id="mobileNavToggle" aria-label="Toggle navigation">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-event-pill">
+          <span class="pulse-dot"></span>
+          <span>GEETA UNIVERSITY & GEETA TECHNICAL HUB • 8 – 11 SEPTEMBER 2026</span>
+        </div>
+
+        <h1 class="hero-title">
+          EXPLORE – BUILD – CONNECT <br>
+          <span class="text-gradient">G-CONNECT 2026</span>
+        </h1>
+
+        <div class="hero-tagline-quote">
+          "Technology • Career Readiness • Opportunities"
+        </div>
+
+        <p class="hero-subtitle">
+          Geeta University's flagship 4-day, internal hands-on technology exposure and career-readiness event. Move across <strong>3 Zones</strong> and <strong>12 Themed Stalls</strong> in small batches (~10 per group) to experience cutting-edge tech, build placement-ready skills, and unlock high-impact opportunities.
+        </p>
+
+        <!-- Key Metrics Grid -->
+        <div class="hero-stats-banner">
+          <div class="stat-banner-item">
+            <span class="stat-banner-num">4</span>
+            <span class="stat-banner-label">Days</span>
+          </div>
+          <div class="stat-banner-sep"></div>
+          <div class="stat-banner-item">
+            <span class="stat-banner-num">3</span>
+            <span class="stat-banner-label">Zones</span>
+          </div>
+          <div class="stat-banner-sep"></div>
+          <div class="stat-banner-item">
+            <span class="stat-banner-num">12</span>
+            <span class="stat-banner-label">Themed Stalls</span>
+          </div>
+          <div class="stat-banner-sep"></div>
+          <div class="stat-banner-item">
+            <span class="stat-banner-num">44</span>
+            <span class="stat-banner-label">Total Slots</span>
+          </div>
+          <div class="stat-banner-sep"></div>
+          <div class="stat-banner-item">
+            <span class="stat-banner-num">~10</span>
+            <span class="stat-banner-label">Std / Group</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#register" class="btn btn-primary btn-lg">
+            <span>✨</span> Student Registration & Digital Pass
+          </a>
+          <a href="#zones" class="btn btn-secondary btn-lg">
+            <span>🚀</span> Explore 3-Zone Stalls
+          </a>
+          <button id="openCheckinDeskBtn" class="btn btn-outline btn-lg">
+            <span>🔍</span> Gate Check-In Desk
+          </button>
+        </div>
+
+        <!-- Live Countdown Timer to Sept 8, 2026 -->
+        <div class="countdown-wrap">
+          <div class="countdown-heading">
+            <span>⏱️</span> Event Countdown (Starts 8 Sept 2026, 9:30 AM):
+          </div>
+          <div class="countdown-box">
+            <div class="countdown-unit">
+              <span class="countdown-num" id="cdDays">00</span>
+              <span class="countdown-label">Days</span>
+            </div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-num" id="cdHours">00</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-num" id="cdMins">00</span>
+              <span class="countdown-label">Mins</span>
+            </div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-num" id="cdSecs">00</span>
+              <span class="countdown-label">Secs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Card -->
+      <div class="hero-visual-card">
+        <div class="hero-brand-card">
+          <div class="hero-brand-header">
+            <div class="hero-badge-live">
+              <span class="pulse-dot"></span> LIVE PLATFORM
+            </div>
+            <span class="hero-hub-badge">GEETA TECHNICAL HUB</span>
+          </div>
+
+          <div class="hero-brand-inner">
+            <div class="hero-logo-large">🎓</div>
+            <h2 class="hero-inner-title">GEETA UNIVERSITY</h2>
+            <div class="hero-inner-event">G-CONNECT 2026</div>
+            <div class="hero-inner-motto">EXPLORE • BUILD • CONNECT</div>
+          </div>
+
+          <div class="hero-live-feed-box">
+            <div class="feed-header">
+              <span>Day 1 CSE Cohort Status</span>
+              <span class="badge badge-cyan" id="heroCohortCounter">861 Students Enrolled</span>
+            </div>
+            <div class="feed-grid">
+              <div class="feed-item">
+                <span class="feed-val text-cyan">91</span>
+                <span class="feed-lbl">CSE Groups (~10/grp)</span>
+              </div>
+              <div class="feed-item">
+                <span class="feed-val text-amber">11</span>
+                <span class="feed-lbl">Standard Slots</span>
+              </div>
+              <div class="feed-item">
+                <span class="feed-val text-emerald">~30m</span>
+                <span class="feed-lbl">Slot Pacing</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-quick-card-actions">
+            <a href="#schedule" class="btn btn-secondary btn-sm" style="width:100%;text-align:center;">
+              📅 View Day 1 Slot Timings Matrix →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. EVENT OVERVIEW & CORE PHILOSOPHY -->
+  <section class="section-wrap" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">1. EVENT OVERVIEW</span>
+        <h2 class="section-title">What is G-Connect 2026?</h2>
+        <p class="section-subtitle">
+          G-Connect 2026 is Geeta University's 4-day, internal, hands-on technology exposure and career-readiness event. It is organised around a 3-zone journey — EXPLORE, BUILD, CONNECT — through which students move in small, managed groups across 12 themed stalls.
+        </p>
+      </div>
+
+      <!-- Core Philosophy Box -->
+      <div class="core-philosophy-card">
+        <div class="phil-header">
+          <span class="phil-icon">💡</span>
+          <div>
+            <div class="phil-title">CORE PHILOSOPHY</div>
+            <div class="phil-formula">TECHNOLOGY AWARENESS + HANDS-ON EXPERIENCE + CAREER OPPORTUNITIES</div>
+          </div>
+        </div>
+        <p class="phil-desc">
+          "Students should leave knowing: <strong>what technologies matter</strong>, <strong>what they can do</strong>, <strong>where to learn them</strong>, <strong>what skills to build</strong>, and <strong>how to connect these skills to careers and placements</strong>."
+        </p>
+      </div>
+
+      <!-- 4-Day Model Overview Grid -->
+      <div class="days-overview-grid">
+        <div class="day-card">
+          <div class="day-card-header">
+            <span class="day-badge">DAY 1</span>
+            <span class="day-date">8 Sept 2026</span>
+          </div>
+          <div class="day-audience-title">School of Computer Science & Engineering</div>
+          <div class="day-audience-desc">B.Tech CSE, BCA & MCA Students (Finalized: 861 Students across 91 Groups)</div>
+          <div class="day-slots-count">11 Slots (9:30 AM – 4:00 PM)</div>
+        </div>
+
+        <div class="day-card">
+          <div class="day-card-header">
+            <span class="day-badge">DAY 2</span>
+            <span class="day-date">9 Sept 2026</span>
+          </div>
+          <div class="day-audience-title">School of Engineering & Technology</div>
+          <div class="day-audience-desc">ECE, Mechanical, Civil, AI/DS & Allied Technology Programs</div>
+          <div class="day-slots-count">11 Slots (Standard ~30m Model)</div>
+        </div>
+
+        <div class="day-card">
+          <div class="day-card-header">
+            <span class="day-badge">DAY 3</span>
+            <span class="day-date">10 Sept 2026</span>
+          </div>
+          <div class="day-audience-title">Management, Commerce & Allied Health</div>
+          <div class="day-audience-desc">School of Management (BBA/MBA), Pharmacy, Allied Sciences & Humanities</div>
+          <div class="day-slots-count">11 Slots (Standard ~30m Model)</div>
+        </div>
+
+        <div class="day-card highlight-day-card">
+          <div class="day-card-header">
+            <span class="day-badge">DAY 4</span>
+            <span class="day-date">11 Sept 2026</span>
+          </div>
+          <div class="day-audience-title">External Institutions & +2 Schools</div>
+          <div class="day-audience-desc">Visiting Schools, External Colleges, Senior Secondary Delegations & Remaining Students</div>
+          <div class="day-slots-count">11 Slots (Pre-Booked Batches)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. THREE-ZONE STRUCTURE OVERVIEW -->
+  <section class="section-wrap" id="zones">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">2. THREE-ZONE JOURNEY</span>
+        <h2 class="section-title">The 3-Zone Experience Architecture</h2>
+        <p class="section-subtitle">
+          The event has exactly three zones with a 5 + 5 + 2 stall distribution, plus Stall 13 (Central Support Desk).
+        </p>
+      </div>
+
+      <div class="zones-overview-grid" id="zonesOverviewGrid">
+        <!-- Rendered dynamically by js/app.js -->
+      </div>
+
+      <!-- Stall 13 Event Support Banner -->
+      <div class="support-stall-banner">
+        <div class="support-stall-icon">🎫</div>
+        <div class="support-stall-content">
+          <div class="support-stall-tag">EVENT SUPPORT • NOT A ZONE STALL</div>
+          <h3 class="support-stall-title">Stall No. 13: Central Registration & Help Desk</h3>
+          <p class="support-stall-desc">
+            Manages participant registration via QR code, verify entries, assign slots and groups (~10 students/group), distribute physical & digital <strong>G-Connect Passports</strong>, and provide on-site coordinator assistance.
+          </p>
+        </div>
+        <div class="support-stall-action">
+          <button class="btn btn-primary" onclick="AdminDashboard.openCheckinModal()">
+            <span>🔍</span> Launch Stall 13 Gate Desk
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 12 THEMED STALLS DIRECTORY -->
+  <section class="section-wrap" id="stalls">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">3. DIRECTORY OF STALLS</span>
+        <h2 class="section-title">Explore the 12 Themed Stalls</h2>
+        <p class="section-subtitle">
+          Each stall follows the 4-step framework: <strong>DISCOVER → EXPERIENCE → CHALLENGE → CONNECT</strong> (~30 min fast rotation).
+        </p>
+      </div>
+
+      <!-- Zone Filter Tabs -->
+      <div class="zone-filter-tabs-wrap">
+        <button class="zone-filter-tab active" data-zone="all">
+          <span>🌟</span> All 12 Stalls
+        </button>
+        <button class="zone-filter-tab" data-zone="zone-1">
+          <span>🚀</span> Zone 1: Explore Future Tech (5)
+        </button>
+        <button class="zone-filter-tab" data-zone="zone-2">
+          <span>🛠️</span> Zone 2: Build Career Readiness (5)
+        </button>
+        <button class="zone-filter-tab" data-zone="zone-3">
+          <span>🌐</span> Zone 3: Connect Opportunities (2)
+        </button>
+      </div>
+
+      <!-- Stalls Grid -->
+      <div class="stalls-grid" id="stallsGrid">
+        <!-- Rendered by js/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. THE 4-STEP STALL EXPERIENCE MODEL -->
+  <section class="section-wrap bg-subtle-mesh">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">4. PEDAGOGICAL MODEL</span>
+        <h2 class="section-title">The 4-Step Stall Experience Flow</h2>
+        <p class="section-subtitle">
+          Slots are standardized at ~30 minutes. Every stall delivers a high-impact, practical rotation:
+        </p>
+      </div>
+
+      <div class="four-step-flow-grid">
+        <div class="flow-step-card">
+          <div class="flow-step-num">1</div>
+          <div class="flow-step-title">DISCOVER</div>
+          <div class="flow-step-sub">What is this technology / skill?</div>
+          <p class="flow-step-desc">
+            Direct, practical introduction to current industry trends, key concepts, tools, and relevance.
+          </p>
+        </div>
+
+        <div class="flow-step-card">
+          <div class="flow-step-num">2</div>
+          <div class="flow-step-title">EXPERIENCE</div>
+          <div class="flow-step-sub">Live demo & hands-on activity</div>
+          <p class="flow-step-desc">
+            Interact with live student-built projects, code demos, AI agent sandboxes, and hardware testbeds.
+          </p>
+        </div>
+
+        <div class="flow-step-card">
+          <div class="flow-step-num">3</div>
+          <div class="flow-step-title">CHALLENGE</div>
+          <div class="flow-step-sub">Interactive task or quiz</div>
+          <p class="flow-step-desc">
+            Rapid 2-minute coding quiz, prompt challenge, threat spotter, quantum circuit, or logic drill.
+          </p>
+        </div>
+
+        <div class="flow-step-card">
+          <div class="flow-step-num">4</div>
+          <div class="flow-step-title">CONNECT</div>
+          <div class="flow-step-sub">Career & Placement pathway</div>
+          <p class="flow-step-desc">
+            Map skills to campus Centres of Excellence (COE), certifications, internship drives, and placement CTCs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. STANDARDIZED 11-SLOT SCHEDULE MATRIX -->
+  <section class="section-wrap" id="schedule">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">5. DAILY SCHEDULE MATRIX</span>
+        <h2 class="section-title">Standardized 11-Slot Schedule (~30 Min / Slot)</h2>
+        <p class="section-subtitle">
+          Effective across all 4 days (9:30 AM – 4:00 PM with Lunch/Reset at 12:30 PM). Below is the finalized Day 1 CSE Department working model (861 students across 91 groups).
+        </p>
+      </div>
+
+      <!-- Day Switcher Tabs -->
+      <div class="sched-day-tabs-wrap">
+        <button class="sched-day-tab active" data-day="1">
+          <span>📅</span> Day 1 (8 Sept): CSE Department (Finalized)
+        </button>
+        <button class="sched-day-tab" data-day="2">
+          <span>📅</span> Day 2 (9 Sept): Engg & Tech (TBF)
+        </button>
+        <button class="sched-day-tab" data-day="3">
+          <span>📅</span> Day 3 (10 Sept): Management & Allied (TBF)
+        </button>
+        <button class="sched-day-tab" data-day="4">
+          <span>📅</span> Day 4 (11 Sept): External Colleges & +2 (TBF)
+        </button>
+      </div>
+
+      <!-- Schedule Header Info Box -->
+      <div id="scheduleDayHeaderInfo"></div>
+
+      <!-- Schedule Table Container -->
+      <div id="scheduleTableContainer">
+        <!-- Rendered dynamically by js/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. STUDENT REGISTRATION & FUTURE DATA VAULT -->
+  <section class="section-wrap" id="register">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">6. REGISTRATION & DATA PORTAL</span>
+        <h2 class="section-title">School Delegation & Student Registration</h2>
+        <p class="section-subtitle">
+          Register your school's faculty coordinator and accompanying student delegation for <strong>G-Connect 2026</strong>. Each school automatically receives a dedicated sheet record, assigned slot & group, and digital boarding passes.
+        </p>
+      </div>
+
+      <div class="reg-container-grid">
+        <!-- Form Side -->
+        <div class="glass-card reg-form-card">
+          <form id="gconnectRegForm" class="reg-form">
+            <!-- 1. Interactive School / Institution Selection System -->
+            <div class="school-select-box">
+              <div class="school-picker-header">
+                <div class="school-picker-title">
+                  <span style="font-size:1.4rem;">🏛️</span>
+                  <div>
+                    <strong style="display:block;font-size:1rem;color:#09090b;font-family:var(--font-heading);">School / Institution Selection</strong>
+                    <span style="font-size:0.75rem;color:#64748b;font-weight:600;">Choose an enrolled school or register a new school delegation</span>
+                  </div>
+                </div>
+
+                <!-- 2-Mode Switcher Tabs/Pills -->
+                <div class="school-mode-toggle-pills" role="tablist">
+                  <button type="button" id="btnModeExistingSchool" class="school-mode-pill active">
+                    <span>🏛️</span> Choose Existing School
+                  </button>
+                  <button type="button" id="btnModeNewSchool" class="school-mode-pill">
+                    <span>➕</span> + Add New School
+                  </button>
+                </div>
+              </div>
+
+              <!-- Mode 1: Choose from Existing Schools -->
+              <div id="panelExistingSchool" class="school-panel">
+                <div class="school-panel-instruction">
+                  <span>👉</span> Select your school from the enrolled institutions below:
+                </div>
+
+                <!-- Selectable School Cards Grid -->
+                <div class="existing-schools-grid" id="existingSchoolsContainer">
+                  <!-- Populated dynamically by RegistrationManager.renderSchoolCards() -->
+                </div>
+
+                <!-- Quick Select Dropdown Fallback -->
+                <div class="form-group" style="margin-top:0.85rem;margin-bottom:0.25rem;">
+                  <label for="regSchoolSelect" style="font-size:0.8rem;font-weight:700;color:#475569;">Or pick from quick dropdown list:</label>
+                  <select id="regSchoolSelect" class="form-select-lg" style="font-size:0.9rem;padding:0.75rem 1rem;font-weight:600;">
+                    <option value="" disabled selected>-- Select an Enrolled School --</option>
+                  </select>
+                </div>
+
+                <!-- Direct Add New School trigger link -->
+                <div class="school-action-footer">
+                  <span>School not in the list?</span>
+                  <button type="button" id="btnSwitchToNewSchool" class="btn-link-action">
+                    <span>➕</span> Click here to Add New School
+                  </button>
+                </div>
+              </div>
+
+              <!-- Mode 2: Add New School Directly -->
+              <div id="panelNewSchool" class="school-panel" style="display:none;">
+                <div class="new-school-banner">
+                  <span class="new-school-icon">✨</span>
+                  <div>
+                    <div class="new-school-title">Registering a New School Delegation</div>
+                    <div class="new-school-desc">A dedicated tab in the Google Spreadsheet will automatically be created for this school.</div>
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin-top:1rem;">
+                  <label for="regNewSchoolName">New School Full Name & Branch / Location <span class="req">*</span></label>
+                  <input type="text" id="regNewSchoolName" placeholder="e.g. Bal Vikas School, Model Town, Panipat" autocomplete="organization" style="font-weight:600;font-size:0.95rem;padding:0.8rem 1rem;">
+                  <small style="color:var(--text-muted);font-size:0.75rem;margin-top:0.35rem;display:block;">
+                    💡 Enter the full official school name. Once submitted, it will be saved permanently in the enrolled schools list.
+                  </small>
+                </div>
+
+                <div class="school-action-footer" style="margin-top:0.75rem;">
+                  <span>Want to choose an enrolled school instead?</span>
+                  <button type="button" id="btnSwitchToExistingSchool" class="btn-link-action">
+                    <span>🏛️</span> Back to Existing Schools List
+                  </button>
+                </div>
+              </div>
+
+              <!-- Active Selected School Confirmation Bar -->
+              <div id="selectedSchoolSummary" class="selected-school-summary-bar" style="display:none;">
+                <div class="selected-summary-left">
+                  <span class="selected-badge">ACTIVE SELECTION</span>
+                  <div id="selectedSchoolNameDisplay" class="selected-school-name">DAV Public School</div>
+                </div>
+                <button type="button" id="btnChangeSchool" class="btn-change-school">
+                  Change ▾
+                </button>
+              </div>
+            </div>
+
+            <!-- School Leadership, Teachers & Students Section (Appears when School is selected) -->
+            <div id="schoolLeadershipSection" style="display:none;">
+              <!-- School Leadership Info -->
+              <div class="section-subhead-row">
+                <div class="section-subhead-title">
+                  <span>👔</span> 1. School Leadership & Office Details
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="regPrincipalName">Principal Name <span class="req">*</span></label>
+                  <input type="text" id="regPrincipalName" required placeholder="e.g. Dr. Rajesh Khanna">
+                </div>
+                <div class="form-group">
+                  <label for="regSchoolPhone">School Office / Contact Number <span class="req">*</span></label>
+                  <input type="tel" id="regSchoolPhone" required placeholder="10-digit school office phone" pattern="[0-9]{10}">
+                </div>
+              </div>
+
+              <!-- Slot & Day Selection -->
+              <div class="form-row-2" style="margin-top:0.5rem;">
+                <div class="form-group">
+                  <label for="regDay">Event Day</label>
+                  <select id="regDay">
+                    <option value="1" selected>Day 1 (8 Sept 2026) — School of CSE & Future Tech</option>
+                    <option value="2">Day 2 (9 Sept 2026) — School of Engineering & Tech</option>
+                    <option value="3">Day 3 (10 Sept 2026) — Management, Commerce & Allied</option>
+                    <option value="4">Day 4 (11 Sept 2026) — School Delegations & Open Reviews</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="regSlot">Assigned / Preferred Slot Timing</label>
+                  <select id="regSlot">
+                    <option value="Slot 1 (9:30 – 10:00 AM)">Slot 1 (9:30 – 10:00 AM)</option>
+                    <option value="Slot 2 (10:00 – 10:30 AM)">Slot 2 (10:00 – 10:30 AM)</option>
+                    <option value="Slot 3 (10:30 – 11:00 AM)" selected>Slot 3 (10:30 – 11:00 AM)</option>
+                    <option value="Slot 4 (11:00 – 11:30 AM)">Slot 4 (11:00 – 11:30 AM - Heavy Batch)</option>
+                    <option value="Slot 5 (11:30 AM – 12:00 PM)">Slot 5 (11:30 AM – 12:00 PM)</option>
+                    <option value="Slot 6 (12:00 – 12:30 PM)">Slot 6 (12:00 – 12:30 PM)</option>
+                    <option value="Slot 7 (1:30 – 2:00 PM)">Slot 7 (1:30 – 2:00 PM)</option>
+                    <option value="Slot 8 (2:00 – 2:30 PM)">Slot 8 (2:00 – 2:30 PM)</option>
+                    <option value="Slot 9 (2:30 – 3:00 PM)">Slot 9 (2:30 – 3:00 PM)</option>
+                    <option value="Slot 10 (3:00 – 3:30 PM)">Slot 10 (3:00 – 3:30 PM)</option>
+                    <option value="Slot 11 (3:30 – 4:00 PM)">Slot 11 (3:30 – 4:00 PM)</option>
+                  </select>
+                  <div class="slot-preview-pill" id="regGroupPreviewBadge">
+                    Allocated Delegation Group: G1-G7 (~10 stds)
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Dynamic Teachers / Faculty Coordinators Section -->
+              <div class="form-section-divider">
+                <div class="section-subhead-row">
+                  <div class="section-subhead-title">
+                    <span>👨‍🏫</span> 2. Faculty Coordinators / Teachers
+                  </div>
+                  <span class="badge badge-cyan" id="teacherCountBadge" style="font-size:0.8rem;padding:0.3rem 0.75rem;">
+                    1 Teacher Added
+                  </span>
+                </div>
+
+                <!-- Container where teacher cards are dynamically rendered -->
+                <div id="teachersContainer" class="teachers-container">
+                  <!-- Rendered dynamically by RegistrationManager.renderTeacherCards() -->
+                </div>
+
+                <!-- Add Another Teacher Button -->
+                <button type="button" id="addTeacherBtn" class="btn-add-teacher">
+                  <span>➕</span> Add Another Teacher / Faculty Coordinator (Teacher 2, Teacher 3...)
+                </button>
+              </div>
+
+              <!-- 3. Dynamic Accompanying Students Section -->
+              <div class="form-section-divider">
+                <div class="section-subhead-row">
+                  <div class="section-subhead-title">
+                    <span>🎓</span> 3. Accompanying Students List
+                  </div>
+                  <span class="badge badge-success" id="studentCountBadge" style="font-size:0.8rem;padding:0.3rem 0.75rem;">
+                    1 Student Added
+                  </span>
+                </div>
+
+                <!-- Container where student cards are dynamically rendered -->
+                <div id="studentsContainer" class="students-container">
+                  <!-- Rendered dynamically by RegistrationManager.renderStudentCards() -->
+                </div>
+
+                <!-- Add Student Button -->
+                <button type="button" id="addStudentBtn" class="btn-add-student">
+                  <span>➕</span> Add Another Student (Student 2, Student 3...)
+                </button>
+              </div>
+
+              <!-- Tech Interests Multi-Select -->
+              <div class="form-group" style="margin-top:1rem;">
+                <label>Technology & Career Interests (Select Stalls to Prioritize):</label>
+                <div class="tech-checkbox-grid">
+                  <label class="tech-check-item">
+                    <input type="checkbox" name="tech_interest" value="FSD (Full Stack)" checked>
+                    <span>💻 FSD (Full Stack Dev)</span>
+                  </label>
+                  <label class="tech-check-item">
+                    <input type="checkbox" name="tech_interest" value="AI & Agentic AI" checked>
+                    <span>🤖 AI & Agentic AI</span>
+                  </label>
+                  <label class="tech-check-item">
+                    <input type="checkbox" name="tech_interest" value="Cyber Security">
+                    <span>🛡️ Cyber Security</span>
+                  </label>
+                  <label class="tech-check-item">
+                    <input type="checkbox" name="tech_interest" value="Quantum Computing">
+                    <span>⚛️ Quantum Computing</span>
+                  </label>
+                  <label class="tech-check-item">
+                    <input type="checkbox" name="tech_interest" value="Cloud & DevOps">
+                    <span>☁️ Cloud & DevOps</span>
+                  </label>
+                  <label class="tech-check-item">
+                    <input type="checkbox" name="tech_interest" value="Data & Analytics">
+                    <span>📊 Data & Analytics</span>
+                  </label>
+                  <label class="tech-check-item">
+                    <input type="checkbox" name="tech_interest" value="Aptitude & Reasoning">
+                    <span>🧠 Aptitude & Logic</span>
+                  </label>
+                  <label class="tech-check-item">
+                    <input type="checkbox" name="tech_interest" value="Communication & Interview">
+                    <span>🎙️ Interview & GD Skills</span>
+                  </label>
+                  <label class="tech-check-item">
+                    <input type="checkbox" name="tech_interest" value="Profile & Branding">
+                    <span>🌟 Profile & Resume Branding</span>
+                  </label>
+                  <label class="tech-check-item">
+                    <input type="checkbox" name="tech_interest" value="Social Coding & Open Source">
+                    <span>🐙 GitHub & Open Source</span>
+                  </label>
+                  <label class="tech-check-item">
+                    <input type="checkbox" name="tech_interest" value="COE & Certifications">
+                    <span>🏆 COE & Certifications</span>
+                  </label>
+                  <label class="tech-check-item">
+                    <input type="checkbox" name="tech_interest" value="Placements & Industry">
+                    <span>💼 Placements & HR Connect</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="regSubmitBtn" class="btn btn-primary btn-lg btn-block" style="margin-top:0.75rem;">
+                <span>🎫</span> Register School Delegation & Generate Digital Passes
+              </button>
+
+              <!-- Sheet status indicator -->
+              <div class="sheet-status-row">
+                <span class="status-dot" id="sheetStatusDot"></span>
+                <span id="sheetStatusText">Google Sheets Webhook Active (Auto Multi-Sheet per School)</span>
+              </div>
+            </div>
+
+            <!-- Empty Selection Prompt (Visible before school is selected) -->
+            <div id="schoolSelectPrompt" class="school-prompt-empty">
+              <div style="font-size:2rem;margin-bottom:0.5rem;">🏛️</div>
+              <div style="font-weight:700;font-size:0.95rem;color:#0f172a;">Please Select or Add a School Above</div>
+              <div style="font-size:0.8rem;color:#64748b;margin-top:0.25rem;">Choose an existing school from the dropdown or select <strong>+ Add New School</strong> to unlock faculty & student registration fields.</div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Info & Perks Side -->
+        <div class="reg-perks-card">
+          <div class="perks-badge">
+            <span>🎫</span> WHAT HAPPENS AFTER REGISTRATION?
+          </div>
+
+          <div class="reg-flow-steps">
+            <div class="reg-flow-item">
+              <div class="flow-num-badge">1</div>
+              <div>
+                <strong>Instant Digital Pass & QR Code</strong>
+                <p>Get a high-resolution boarding pass with your assigned Day, Slot Timing, and Group Number (~10 stds/group).</p>
+              </div>
+            </div>
+
+            <div class="reg-flow-item">
+              <div class="flow-num-badge">2</div>
+              <div>
+                <strong>12-Stall Digital Passport</strong>
+                <p>Stamp your progress across all 12 themed stalls. Complete stalls to unlock your official G-Connect 2026 Certificate.</p>
+              </div>
+            </div>
+
+            <div class="reg-flow-item">
+              <div class="flow-num-badge">3</div>
+              <div>
+                <strong>Campus Check-in at Stall 13</strong>
+                <p>On arrival, show your QR at Stall 13 (Registration Desk) for 1-second gate verification and group wristband.</p>
+              </div>
+            </div>
+
+            <div class="reg-flow-item">
+              <div class="flow-num-badge">4</div>
+              <div>
+                <strong>Future Placement & COE Priority</strong>
+                <p>Your technical interests, GitHub, and LinkedIn profiles will be directly mapped for upcoming hackathons, COE batches, and placement drives.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="perks-stats-box">
+            <div class="p-stat">
+              <span class="p-num" id="statTotalCheckins">0</span>
+              <span class="p-lbl">Campus Checked-In</span>
+            </div>
+            <div class="p-stat">
+              <span class="p-num" id="statGeetaStudents">0</span>
+              <span class="p-lbl">School Students</span>
+            </div>
+            <div class="p-stat">
+              <span class="p-num" id="statExtStudents">0</span>
+              <span class="p-lbl">School Faculty</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. COORDINATOR HUB & 10 GOLDEN RULES -->
+  <section class="section-wrap" id="coordinators">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">7. OPERATIONS & COORDINATION</span>
+        <h2 class="section-title">Coordinator Briefing & 10 Golden Rules</h2>
+        <p class="section-subtitle">
+          Guidelines and operational standards for Faculty Stall Leads, Mentors, and Student Coordinators.
+        </p>
+      </div>
+
+      <div class="golden-rules-grid">
+        <div class="golden-rules-col">
+          <h3 class="rules-col-title"><span>📜</span> The 10 Golden Rules</h3>
+          <div class="rules-list" id="goldenRulesContainer">
+            <!-- Rendered by js/admin-dashboard.js -->
+          </div>
+        </div>
+
+        <div class="contingency-col">
+          <h3 class="rules-col-title"><span>🛡️</span> Technical Contingencies & Operations</h3>
+          
+          <div class="contingency-card">
+            <div class="plan-header plan-a">PLAN A: LIVE DEMONSTRATION</div>
+            <p>Direct live interactive web apps, cloud CI/CD pipelines, live API multi-agents, and CTF sandboxes.</p>
+          </div>
+
+          <div class="contingency-card">
+            <div class="plan-header plan-b">PLAN B: LOCAL / OFFLINE DEMO</div>
+            <p>Isolated Docker containers, local LLMs (Ollama), offline Jupyter notebooks, and local VM attack-defense sandboxes.</p>
+          </div>
+
+          <div class="contingency-card">
+            <div class="plan-header plan-c">PLAN C: RECORDED / PRESENTATION</div>
+            <p>Pre-recorded 4K walkthrough videos, interactive screenshots, and case study infographic display boards.</p>
+          </div>
+
+          <div class="coord-actions-box">
+            <button class="btn btn-secondary btn-block" id="openCoordinatorModalBtn">
+              <span>📋</span> Open Interactive Coordinator Checklist Hub →
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FAQS SECTION -->
+  <section class="section-wrap" id="faqs">
+    <div class="container" style="max-width: 850px;">
+      <div class="section-header">
+        <span class="section-kicker">8. QUESTIONS & ANSWERS</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is the standardized ~30-minute 11-slot model?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>To maximize departmental throughput and hands-on engagement, each day is organized into 11 slots of ~30 minutes each (9:30 AM to 4:00 PM with a Lunch/Reset break from 12:30 to 1:30 PM). Within each slot, students are organized into small groups of ~10 (G1, G2, G3...) for fast stall rotations.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does the 4-step stall experience work?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Every stall follows the sequence: <strong>DISCOVER</strong> (introduction to technology), <strong>EXPERIENCE</strong> (live in-house project demo), <strong>CHALLENGE</strong> (interactive 2-min task/quiz), and <strong>CONNECT</strong> (career pathways and campus COE links).</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is the G-Connect Digital Passport?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Upon registration, every student receives a digital passport. As you visit each of the 12 themed stalls across Zone 1, Zone 2, and Zone 3, you collect digital checkpoint stamps. Visiting 6+ stalls unlocks your official Geeta University G-Connect 2026 Certificate of Participation!</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Who is eligible to register for G-Connect 2026?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Registration is open exclusively for <strong>School Students</strong> and <strong>Faculty of the School</strong> across all university schools & departments. Students receive an instant digital entry pass, group allocation, and 12-stall passport, while faculty members receive official mentorship & coordinator passes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <div class="logo-icon">🏛️</div>
+          <div class="logo-text">
+            <span class="brand-name">G-<span>CONNECT</span> 2026</span>
+            <span class="brand-sub">Geeta University • Geeta Technical Hub</span>
+          </div>
+        </div>
+        <p class="footer-tagline">
+          "EXPLORE – BUILD – CONNECT" • 8 – 11 September 2026<br>
+          Technology • Career Readiness • Opportunities
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#about">Overview</a></li>
+            <li><a href="#zones">3 Zones</a></li>
+            <li><a href="#stalls">12 Themed Stalls</a></li>
+            <li><a href="#schedule">11-Slot Schedule</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Portals</h4>
+          <ul>
+            <li><a href="#register">Student Registration</a></li>
+            <li><a href="javascript:void(0)" onclick="AdminDashboard.openCheckinModal()">Stall 13 Gate Check-in</a></li>
+            <li><a href="javascript:void(0)" onclick="AdminDashboard.openAdminModal()">Student Talent Vault</a></li>
+            <li><a href="javascript:void(0)" onclick="AdminDashboard.openCoordinatorModal()">Coordinators Hub</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <span>© 2026 Geeta University & Geeta Technical Hub. All Rights Reserved.</span>
+        <span>Internal Use & Coordinator Briefing Standard</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODALS
+       ========================================================================= -->
+
+  <!-- 1. STALL 4-STEP DETAIL MODAL -->
+  <div class="modal-overlay" id="stallDetailModal">
+    <div class="modal-card modal-lg">
+      <button class="modal-close" id="closeStallModalBtn">&times;</button>
+      <div id="stallModalBody">
+        <!-- Injected dynamically by js/app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. DIGITAL ENTRY PASS / BOARDING PASS MODAL -->
+  <div class="modal-overlay" id="ticketModal">
+    <div class="modal-card modal-ticket">
+      <button class="modal-close" id="closePassModalBtn">&times;</button>
+      
+      <div id="printablePassCard" class="pass-boarding-card">
+        <div class="pass-card-top">
+          <div class="pass-brand-left">
+            <span class="pass-brand-inst">GEETA UNIVERSITY</span>
+            <span class="pass-brand-event">G-CONNECT 2026</span>
+          </div>
+          <div class="pass-badge-right">
+            <span class="pass-official-pill">OFFICIAL DIGITAL ENTRY PASS</span>
+            <span id="passDayBadge" class="pass-day-pill">Day 1 • Sept 8, 2026</span>
+          </div>
+        </div>
+
+        <div class="pass-card-main-grid">
+          <!-- Left details -->
+          <div class="pass-details-col">
+            <div class="pass-student-name" id="passStudentName">Aarav Sharma</div>
+            <div class="pass-student-meta" id="passProgram">B.Tech CSE (3rd Sem - Sec A)</div>
+            <div class="pass-student-dept" id="passDepartment">School of Computer Science & Engineering</div>
+
+            <div class="pass-slot-box">
+              <div class="pass-slot-label">ALLOCATED ENTRY SLOT:</div>
+              <div class="pass-slot-time" id="passSlotTime">Slot 3 (10:30 – 11:00 AM)</div>
+              <div class="pass-group-tag" id="passGroupBadge">Group G2 (~10 stds)</div>
+            </div>
+
+            <div class="pass-interests-row" id="passInterests">
+              <!-- Tech tags -->
+            </div>
+          </div>
+
+          <!-- Right QR code & ID -->
+          <div class="pass-qr-col">
+            <div class="pass-qr-frame">
+              <div id="passQrCodeContainer"></div>
+            </div>
+            <div class="pass-reg-id-text">
+              REG ID: <strong id="passRegId">GC-2026-1042</strong>
+            </div>
+            <div class="pass-roll-id-text">
+              ROLL: <span id="passStudentId">GU23CSE0142</span>
+            </div>
+            <div id="passCheckinStatus" style="margin-top:0.5rem;"></div>
+          </div>
+        </div>
+
+        <div class="pass-card-bottom">
+          <div class="pass-zone-route">
+            <span>ROUTE:</span>
+            <span class="text-cyan">Zone 1 (Explore)</span> ➔ 
+            <span class="text-amber">Zone 2 (Build)</span> ➔ 
+            <span class="text-emerald">Zone 3 (Connect)</span>
+          </div>
+          <div id="passRolePill" class="pass-role-tag">Geeta University Student</div>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="pass-modal-actions">
+        <button class="btn btn-primary" id="downloadPassBtn">
+          <span>📥</span> Download Pass Image
+        </button>
+        <button class="btn btn-secondary" id="openPassportFromPassBtn">
+          <span>📖</span> Open 12-Stall Digital Passport
+        </button>
+        <button class="btn btn-secondary" id="printPassBtn">
+          <span>🖨️</span> Print Pass
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. 12-STALL DIGITAL PASSPORT MODAL -->
+  <div class="modal-overlay" id="passportModal">
+    <div class="modal-card modal-lg modal-passport">
+      <button class="modal-close" id="closePassportModalBtn">&times;</button>
+      
+      <div class="passport-header">
+        <div style="font-size:2.5rem;">📖</div>
+        <div>
+          <div class="passport-event-title">GEETA UNIVERSITY • G-CONNECT 2026</div>
+          <h2 class="passport-holder-name" id="passportStudentName">Aarav Sharma</h2>
+          <div class="passport-holder-sub" id="passportStudentInfo">B.Tech CSE • GU23CSE0142 • Group G2</div>
+        </div>
+        <div class="passport-reg-badge" id="passportRegId">GC-2026-1042</div>
+      </div>
+
+      <!-- Passport Progress Bar -->
+      <div class="passport-progress-card">
+        <div class="progress-info">
+          <span>12 Themed Stalls Journey</span>
+          <span id="passportProgressCount" style="font-weight:700;color:var(--accent-green);">0 / 12 Stalls Verified</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="passportProgressBar" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- Certificate Unlock Banner -->
+      <div class="cert-unlock-banner" id="passportCertUnlockBanner" style="display:none;">
+        <div>
+          <strong>🎉 Milestone Achieved!</strong> You have verified 6+ stalls and unlocked your Official Participation Certificate!
+        </div>
+        <button class="btn btn-primary btn-sm" onclick="TicketGenerator.generateCertificate()">
+          🎓 View & Download Certificate
+        </button>
+      </div>
+
+      <!-- 12 Stalls Grid -->
+      <div class="passport-stalls-grid" id="passportStallsGrid">
+        <!-- Injected by js/ticket-generator.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. OFFICIAL PARTICIPATION CERTIFICATE MODAL -->
+  <div class="modal-overlay" id="certificateModal">
+    <div class="modal-card modal-lg">
+      <button class="modal-close" onclick="document.getElementById('certificateModal').classList.remove('open')">&times;</button>
+      
+      <div class="certificate-frame" id="printableCertificate">
+        <div class="cert-inner-border">
+          <div class="cert-header">
+            <div class="cert-inst-name">GEETA UNIVERSITY & GEETA TECHNICAL HUB</div>
+            <div class="cert-title">CERTIFICATE OF PARTICIPATION</div>
+            <div class="cert-event-name">G-CONNECT 2026</div>
+            <div class="cert-motto">"Technology • Career Readiness • Opportunities"</div>
+          </div>
+
+          <div class="cert-body">
+            <p>This is to certify that</p>
+            <h2 class="cert-name" id="certHolderName">Aarav Sharma</h2>
+            <p>Bearing Student / Roll ID: <strong id="certHolderId">GU23CSE0142</strong> (<span id="certHolderDept">School of Computer Science & Engineering</span>)</p>
+            <p>has actively participated in <strong>G-Connect 2026</strong>, completing hands-on demonstrations and technical challenges across:</p>
+            <div class="cert-stall-count" id="certStallCount">12 Themed Stalls Completed</div>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.5rem;">EXPLORE (Future Tech) • BUILD (Career Readiness) • CONNECT (Opportunities)</p>
+          </div>
+
+          <div class="cert-footer">
+            <div class="cert-sig-box">
+              <div class="sig-line">Dean / HoD</div>
+              <div class="sig-title">Geeta University</div>
+            </div>
+            <div class="cert-seal">
+              <div class="seal-circle">VERIFIED 2026</div>
+              <div id="certIssueDate" style="font-size:0.65rem;margin-top:0.25rem;">Issued: Sept 8-11, 2026</div>
+            </div>
+            <div class="cert-sig-box">
+              <div class="sig-line">Convenor</div>
+              <div class="sig-title">Geeta Technical Hub</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:center;gap:1rem;margin-top:1.5rem;">
+        <button class="btn btn-primary" onclick="window.print()">
+          <span>🖨️</span> Print / Save PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. STALL 13: ON-CAMPUS GATE CHECK-IN DESK MODAL -->
+  <div class="modal-overlay" id="checkinDeskModal">
+    <div class="modal-card modal-lg">
+      <button class="modal-close" onclick="AdminDashboard.closeCheckinModal()">&times;</button>
+      
+      <div class="checkin-modal-header">
+        <div style="font-size:2.2rem;">🔍</div>
+        <div>
+          <span class="stall-number-pill">STALL #13 CENTRAL DESK</span>
+          <h2 style="font-size:1.5rem;margin-top:0.2rem;">On-Campus Gate Check-In & Scanner</h2>
+          <div style="font-size:0.85rem;color:var(--text-muted);">Instant Student Roll ID / QR Verification & Group Wristband Issuance</div>
+        </div>
+      </div>
+
+      <!-- Live Search Bar -->
+      <div class="checkin-search-wrap">
+        <input type="text" id="checkinSearchInput" class="checkin-search-input" placeholder="Type Student Roll ID (e.g. GU23CSE0142), Reg ID, or Phone..." autofocus>
+        <button class="btn btn-primary" onclick="AdminDashboard.handleCheckinSearch(document.getElementById('checkinSearchInput').value)">
+          Verify Entry
+        </button>
+      </div>
+
+      <!-- Search Result Box -->
+      <div id="checkinSearchResultBox" class="checkin-result-wrap">
+        <div class="checkin-empty-state">
+          <div style="font-size:2.5rem;margin-bottom:0.5rem;">🔍</div>
+          <p>Scan entry QR code or type Student Roll No / Registration ID (e.g. <code>GU23CSE0142</code> or <code>GC-2026-1042</code>)</p>
+        </div>
+      </div>
+
+      <!-- Recent Check-ins -->
+      <div class="recent-checkins-wrap">
+        <h4 style="font-size:0.95rem;color:var(--accent-green);margin-bottom:0.75rem;">⚡ Recent Campus Check-ins</h4>
+        <div id="recentCheckinsList" class="recent-checkins-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. ADMIN STUDENT TALENT VAULT & CSV EXPORT MODAL -->
+  <div class="modal-overlay" id="adminModal">
+    <div class="modal-card modal-xl">
+      <button class="modal-close" onclick="AdminDashboard.closeAdminModal()">&times;</button>
+      
+      <div class="admin-modal-header">
+        <div>
+          <span class="badge badge-purple">TALENT VAULT & PLACEMENT ANALYTICS</span>
+          <h2 style="font-size:1.6rem;margin-top:0.25rem;">G-Connect Student Database</h2>
+          <div style="font-size:0.85rem;color:var(--text-muted);">Future skill tracking, GitHub/LinkedIn portfolios, and slot attendance records.</div>
+        </div>
+        <div style="display:flex;gap:0.75rem;">
+          <button class="btn btn-primary btn-sm" id="exportCsvBtn">
+            <span>📥</span> Export to CSV / Excel
+          </button>
+        </div>
+      </div>
+
+      <!-- Filters Row -->
+      <div class="admin-filters-bar">
+        <input type="text" id="adminSearchInput" class="admin-search-input" placeholder="Search by name, roll no, email, department...">
+        
+        <select id="adminDeptFilter" class="admin-select-filter">
+          <option value="all">All Departments / Programs</option>
+          <option value="CSE">Computer Science (CSE / BCA / MCA)</option>
+          <option value="Engineering">School of Engineering</option>
+          <option value="Management">School of Management</option>
+          <option value="Pharmacy">School of Pharmacy</option>
+          <option value="External">External Institutions</option>
+        </select>
+
+        <select id="adminTechFilter" class="admin-select-filter">
+          <option value="all">All Tech Interests</option>
+          <option value="AI">AI & Agentic AI</option>
+          <option value="FSD">Full Stack Development</option>
+          <option value="Cyber">Cyber Security</option>
+          <option value="Cloud">Cloud & DevOps</option>
+          <option value="Quantum">Quantum Computing</option>
+          <option value="Data">Data & Analytics</option>
+        </select>
+
+        <select id="adminStatusFilter" class="admin-select-filter">
+          <option value="all">All Statuses</option>
+          <option value="checked_in">Campus Checked-In Only</option>
+          <option value="pending">Gate Pending Only</option>
+          <option value="has_github">Has GitHub Profile</option>
+        </select>
+
+        <span id="adminFilteredCountBadge" class="badge badge-green" style="align-self:center;">Loading...</span>
+      </div>
+
+      <!-- Student Data Table -->
+      <div class="table-responsive admin-table-wrap">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>ID & Roll No</th>
+              <th>Student Details</th>
+              <th>Program & Dept</th>
+              <th>Slot & Group</th>
+              <th>Tech Interests</th>
+              <th>Campus Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="adminTableBody">
+            <!-- Rendered by js/admin-dashboard.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. COORDINATOR COMMAND CENTER MODAL -->
+  <div class="modal-overlay" id="coordinatorModal">
+    <div class="modal-card modal-lg">
+      <button class="modal-close" onclick="AdminDashboard.closeCoordinatorModal()">&times;</button>
+      
+      <div style="margin-bottom:1.5rem;">
+        <span class="badge badge-amber">COORDINATOR COMMAND HUB</span>
+        <h2 style="font-size:1.6rem;margin-top:0.25rem;">Daily Coordinator Checklists & Rules</h2>
+        <p style="color:var(--text-muted);font-size:0.9rem;">Interactive checklist for Faculty Stall Leads and Student Coordinators across all 4 days.</p>
+      </div>
+
+      <div id="coordChecklistItems" class="coord-checklists-container">
+        <!-- Rendered by js/admin-dashboard.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. GOOGLE SHEETS WEBHOOK SETTINGS MODAL -->
+  <div class="modal-overlay" id="webhookSettingsModal">
+    <div class="modal-card modal-md">
+      <button class="modal-close" onclick="AdminDashboard.closeWebhookModal()">&times;</button>
+      
+      <div style="margin-bottom:1.25rem;">
+        <div style="font-size:2.2rem;">⚙️</div>
+        <h2 style="font-size:1.4rem;margin-top:0.25rem;">Google Sheets Webhook Sync</h2>
+        <p style="color:var(--text-muted);font-size:0.88rem;">Sync all student registrations in real-time to your Google Sheet.</p>
+      </div>
+
+      <div class="form-group" style="margin-bottom:1.25rem;">
+        <label for="webhookUrlInput">Google Apps Script Web App URL:</label>
+        <input type="url" id="webhookUrlInput" placeholder="https://script.google.com/macros/s/AKfycbx.../exec" style="font-size:0.85rem;">
+        <small style="color:var(--text-muted);display:block;margin-top:0.35rem;">
+          Must start with <code>https://script.google.com/macros/s/</code> with access set to 'Anyone'.
+        </small>
+      </div>
+
+      <div style="display:flex;gap:0.75rem;justify-content:flex-end;">
+        <button class="btn btn-secondary" id="testWebhookBtn">
+          <span>📡</span> Test Ping
+        </button>
+        <button class="btn btn-primary" id="saveWebhookBtn">
+          Save Webhook URL
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/stalls-data.js"></script>
+  <script src="js/registration.js"></script>
+  <script src="js/ticket-generator.js"></script>
+  <script src="js/admin-dashboard.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
