@@ -435,12 +435,45 @@ const App = {
     const navLinks = document.getElementById("navLinks");
     if (mobileBtn && navLinks) {
       mobileBtn.addEventListener("click", () => {
-        navLinks.classList.toggle("open");
+        const isOpen = navLinks.classList.toggle("open");
+        mobileBtn.classList.toggle("active", isOpen);
+        mobileBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
       });
 
       // Close on link click
-      navLinks.querySelectorAll("a").forEach(a => {
-        a.addEventListener("click", () => navLinks.classList.remove("open"));
+      navLinks.querySelectorAll(".nav-link").forEach(a => {
+        a.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+          mobileBtn.classList.remove("active");
+          mobileBtn.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+
+    // Staff Portals Dropdown
+    const toolsContainer = document.getElementById("toolsDropdownContainer");
+    const toolsBtn = document.getElementById("portalToolsToggleBtn");
+    if (toolsContainer && toolsBtn) {
+      toolsBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = toolsContainer.classList.toggle("open");
+        toolsBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+
+      // Close dropdown when item is clicked
+      toolsContainer.querySelectorAll(".tool-dropdown-item").forEach(item => {
+        item.addEventListener("click", () => {
+          toolsContainer.classList.remove("open");
+          toolsBtn.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      // Close dropdown when clicking anywhere outside
+      document.addEventListener("click", (e) => {
+        if (!toolsContainer.contains(e.target)) {
+          toolsContainer.classList.remove("open");
+          toolsBtn.setAttribute("aria-expanded", "false");
+        }
       });
     }
 

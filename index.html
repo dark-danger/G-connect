@@ -37,18 +37,41 @@
   <!-- Toast Notification Container -->
   <div id="toastContainer" class="toast-container"></div>
 
-  <!-- Navigation Bar -->
-  <header class="navbar">
-    <div class="container nav-container">
-      <div class="logo-wrap" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-        <div class="logo-icon">🏛️</div>
-        <div class="logo-text">
-          <span class="brand-name">G-<span>CONNECT</span> 2026</span>
-          <span class="brand-sub">Geeta University • Geeta Technical Hub</span>
-        </div>
+  <!-- Top Announcement Bar -->
+  <div class="header-topbar">
+    <div class="container topbar-container">
+      <div class="topbar-left">
+        <span class="topbar-badge"><span class="pulse-dot-sm"></span> LIVE CAMPUS CONCLAVE</span>
+        <span class="topbar-item">📍 Geeta University, Panipat • 8 – 11 September 2026</span>
       </div>
+      <div class="topbar-right">
+        <span class="topbar-pill">⚡ 3 Zones</span>
+        <span class="topbar-pill">🎪 12 Themed Stalls</span>
+        <span class="topbar-pill">⏱️ 44 Hands-on Slots</span>
+        <span class="topbar-badge-status">🎟️ Registration Open</span>
+      </div>
+    </div>
+  </div>
 
-      <nav>
+  <!-- Main Sticky Navigation Bar -->
+  <header class="navbar" id="mainNavbar">
+    <div class="container nav-container">
+      <!-- Brand & Logos -->
+      <a href="#hero" class="brand-group" title="G-Connect 2026 - Geeta University & GTH">
+        <div class="brand-logos-wrap">
+          <img src="assets/geeta-university-logo.png" alt="Geeta University Logo" class="brand-logo-img gu-logo">
+          <div class="brand-v-divider"></div>
+          <img src="assets/geeta-tech-hub-logo.png" alt="Geeta Technical Hub Logo" class="brand-logo-img gth-logo">
+        </div>
+        <div class="brand-v-divider hide-mobile"></div>
+        <div class="brand-event-badge">
+          <div class="event-title-main">G-<span>CONNECT</span> <span class="event-year-pill">2026</span></div>
+          <div class="event-subtitle">INTERNAL TECH EXPO</div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu">
         <ul class="nav-links" id="navLinks">
           <li><a href="#about" class="nav-link">Overview</a></li>
           <li><a href="#zones" class="nav-link">3 Zones</a></li>
@@ -56,24 +79,75 @@
           <li><a href="#schedule" class="nav-link">11-Slot Schedule</a></li>
           <li><a href="#coordinators" class="nav-link">Coordinators Hub</a></li>
           <li><a href="#faqs" class="nav-link">FAQs</a></li>
+          
+          <!-- Mobile Specific Actions (Visible only on mobile drawer) -->
+          <li class="mobile-drawer-actions">
+            <div class="mobile-drawer-title">Staff & Portals</div>
+            <div class="mobile-tools-grid">
+              <button class="mobile-tool-btn" onclick="AdminDashboard.openCheckinModal(); document.getElementById('navLinks').classList.remove('open');">
+                <span>🔍</span> Gate Check-in (Stall 13)
+              </button>
+              <button class="mobile-tool-btn" onclick="AdminDashboard.openAdminModal(); document.getElementById('navLinks').classList.remove('open');">
+                <span>📊</span> Student Vault
+              </button>
+              <button class="mobile-tool-btn" onclick="AdminDashboard.openWebhookModal(); document.getElementById('navLinks').classList.remove('open');">
+                <span>⚙️</span> G-Sheet Webhook
+              </button>
+            </div>
+            <a href="#register" class="btn btn-register-cta btn-block" style="margin-top: 1rem; text-align: center; justify-content: center;" onclick="document.getElementById('navLinks').classList.remove('open');">
+              <span>🎫</span> Register / Pass
+            </a>
+          </li>
         </ul>
       </nav>
 
+      <!-- Desktop Navigation Actions & Tools Dropdown -->
       <div class="nav-actions">
-        <button id="openCheckinNavBtn" class="btn btn-secondary btn-sm" title="Stall 13 On-Campus Gate Check-in Desk">
-          <span>🔍</span> Gate Check-in (Stall 13)
-        </button>
-        <button id="openAdminModalBtn" class="btn btn-secondary btn-sm" title="Student Talent Bank & CSV Export">
-          <span>📊</span> Student Vault
-        </button>
-        <button id="openWebhookNavBtn" class="btn btn-secondary btn-sm" title="Configure Google Sheets Webhook Sync">
-          <span>⚙️</span> G-Sheet Sync
-        </button>
-        <a href="#register" class="btn btn-primary btn-sm">
-          <span>🎫</span> Register / Pass
+        <!-- Staff & Admin Tools Dropdown -->
+        <div class="tools-dropdown-container" id="toolsDropdownContainer">
+          <button id="portalToolsToggleBtn" class="btn btn-tools-trigger" type="button" aria-haspopup="true" aria-expanded="false" title="Admin and Coordinator Portals">
+            <span class="btn-icon">⚡</span>
+            <span class="btn-label">Staff Portals</span>
+            <span class="dropdown-chevron">▾</span>
+          </button>
+          
+          <div class="tools-dropdown-menu" id="toolsDropdownMenu">
+            <div class="dropdown-menu-header">Coordinator & Staff Hub</div>
+            <button id="openCheckinNavBtn" class="tool-dropdown-item" title="Stall 13 On-Campus Gate Check-in Desk">
+              <span class="item-icon-box">🔍</span>
+              <div class="item-content">
+                <span class="item-title">Gate Check-in Desk</span>
+                <span class="item-desc">Stall 13 real-time student scanner</span>
+              </div>
+            </button>
+            <button id="openAdminModalBtn" class="tool-dropdown-item" title="Student Talent Bank & CSV Export">
+              <span class="item-icon-box">📊</span>
+              <div class="item-content">
+                <span class="item-title">Student Talent Vault</span>
+                <span class="item-desc">Search cohorts & export CSV</span>
+              </div>
+            </button>
+            <button id="openWebhookNavBtn" class="tool-dropdown-item" title="Configure Google Sheets Webhook Sync">
+              <span class="item-icon-box">⚙️</span>
+              <div class="item-content">
+                <span class="item-title">Google Sheets Sync</span>
+                <span class="item-desc">Live App Script webhook setup</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Primary Registration CTA Button -->
+        <a href="#register" class="btn btn-register-cta">
+          <span>🎫</span>
+          <span>Register / Pass</span>
         </a>
-        <button class="mobile-toggle" id="mobileNavToggle" aria-label="Toggle navigation">
-          ☰
+
+        <!-- Mobile Navigation Hamburger Toggle -->
+        <button class="mobile-toggle" id="mobileNavToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
         </button>
       </div>
     </div>
@@ -181,8 +255,12 @@
           </div>
 
           <div class="hero-brand-inner">
-            <div class="hero-logo-large">🎓</div>
-            <h2 class="hero-inner-title">GEETA UNIVERSITY</h2>
+            <div class="hero-brand-logos-wrap">
+              <img src="assets/geeta-university-logo.png" alt="Geeta University Logo" class="hero-brand-logo gu">
+              <span class="hero-brand-plus">×</span>
+              <img src="assets/geeta-tech-hub-logo.png" alt="Geeta Technical Hub Logo" class="hero-brand-logo gth">
+            </div>
+            <h2 class="hero-inner-title">GEETA UNIVERSITY & GTH</h2>
             <div class="hero-inner-event">G-CONNECT 2026</div>
             <div class="hero-inner-motto">EXPLORE • BUILD • CONNECT</div>
           </div>
@@ -881,12 +959,14 @@
   <footer class="footer">
     <div class="container footer-container">
       <div class="footer-brand">
-        <div class="logo-wrap">
-          <div class="logo-icon">🏛️</div>
-          <div class="logo-text">
-            <span class="brand-name">G-<span>CONNECT</span> 2026</span>
-            <span class="brand-sub">Geeta University • Geeta Technical Hub</span>
-          </div>
+        <div class="footer-logos-wrap" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+          <img src="assets/geeta-university-logo.png" alt="Geeta University Logo" class="footer-logo-img gu" />
+          <div class="footer-logo-divider"></div>
+          <img src="assets/geeta-tech-hub-logo.png" alt="Geeta Technical Hub Logo" class="footer-logo-img gth" />
+        </div>
+        <div class="footer-brand-title">
+          <span class="brand-name">G-<span>CONNECT</span> 2026</span>
+          <span class="brand-sub">Geeta University • Geeta Technical Hub</span>
         </div>
         <p class="footer-tagline">
           "EXPLORE – BUILD – CONNECT" • 8 – 11 September 2026<br>
