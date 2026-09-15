@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>G-Connect 2026 | Geeta University & Geeta Technical Hub</title>
-  <meta name="description" content="Official Portal for G-Connect 2026 at Geeta University (8-11 September 2026). Explore 3 Zones, 12 Themed Stalls, 44 Slots, hands-on technology exposure, student registration, and digital passport.">
-  <meta name="keywords" content="Geeta University, Geeta Technical Hub, G-Connect 2026, Explore Build Connect, Technology Expo, Career Readiness, 12 Stalls, 3 Zones, AI Agentic AI, Cyber Security, Full Stack Development, Quantum Computing">
+  <meta name="description"
+    content="Official Portal for G-Connect 2026 at Geeta University (21-24 September 2026). Explore 3 Zones, 12 Themed Stalls, 44 Slots, hands-on technology exposure, student registration, and digital passport.">
+  <meta name="keywords"
+    content="Geeta University, Geeta Technical Hub, G-Connect 2026, Explore Build Connect, Technology Expo, Career Readiness, 12 Stalls, 3 Zones, AI Agentic AI, Cyber Security, Full Stack Development, Quantum Computing">
 
   <!-- OpenGraph / Social Media -->
   <meta property="og:title" content="G-Connect 2026 | Geeta University & Geeta Technical Hub">
-  <meta property="og:description" content="Explore – Build – Connect. 4 Days, 3 Zones, 12 Themed Stalls, 44 Slots. Technology • Career Readiness • Opportunities.">
+  <meta property="og:description"
+    content="Explore – Build – Connect. 4 Days, 3 Zones, 12 Themed Stalls, 44 Slots. Technology • Career Readiness • Opportunities.">
   <meta property="og:type" content="website">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles/main.css">
@@ -27,6 +33,7 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
+
 <body>
 
   <!-- Ambient Glowing Orbs -->
@@ -79,22 +86,27 @@
           <li><a href="#schedule" class="nav-link">11-Slot Schedule</a></li>
           <li><a href="#coordinators" class="nav-link">Coordinators Hub</a></li>
           <li><a href="#faqs" class="nav-link">FAQs</a></li>
-          
+
           <!-- Mobile Specific Actions (Visible only on mobile drawer) -->
           <li class="mobile-drawer-actions">
             <div class="mobile-drawer-title">Staff & Portals</div>
             <div class="mobile-tools-grid">
-              <button class="mobile-tool-btn" onclick="AdminDashboard.openCheckinModal(); document.getElementById('navLinks').classList.remove('open');">
+              <button class="mobile-tool-btn"
+                onclick="AdminDashboard.openCheckinModal(); document.getElementById('navLinks').classList.remove('open');">
                 <span>🔍</span> Gate Check-in (Stall 13)
               </button>
-              <button class="mobile-tool-btn" onclick="AdminDashboard.openAdminModal(); document.getElementById('navLinks').classList.remove('open');">
+              <button class="mobile-tool-btn"
+                onclick="AdminDashboard.openAdminModal(); document.getElementById('navLinks').classList.remove('open');">
                 <span>📊</span> Student Vault
               </button>
-              <button class="mobile-tool-btn" onclick="AdminDashboard.openWebhookModal(); document.getElementById('navLinks').classList.remove('open');">
+              <button class="mobile-tool-btn"
+                onclick="AdminDashboard.openWebhookModal(); document.getElementById('navLinks').classList.remove('open');">
                 <span>⚙️</span> G-Sheet Webhook
               </button>
             </div>
-            <a href="#register" class="btn btn-register-cta btn-block" style="margin-top: 1rem; text-align: center; justify-content: center;" onclick="document.getElementById('navLinks').classList.remove('open');">
+            <a href="#register" class="btn btn-register-cta btn-block"
+              style="margin-top: 1rem; text-align: center; justify-content: center;"
+              onclick="document.getElementById('navLinks').classList.remove('open');">
               <span>🎫</span> Register / Pass
             </a>
           </li>
@@ -105,12 +117,13 @@
       <div class="nav-actions">
         <!-- Staff & Admin Tools Dropdown -->
         <div class="tools-dropdown-container" id="toolsDropdownContainer">
-          <button id="portalToolsToggleBtn" class="btn btn-tools-trigger" type="button" aria-haspopup="true" aria-expanded="false" title="Admin and Coordinator Portals">
+          <button id="portalToolsToggleBtn" class="btn btn-tools-trigger" type="button" aria-haspopup="true"
+            aria-expanded="false" title="Admin and Coordinator Portals">
             <span class="btn-icon">⚡</span>
             <span class="btn-label">Staff Portals</span>
             <span class="dropdown-chevron">▾</span>
           </button>
-          
+
           <div class="tools-dropdown-menu" id="toolsDropdownMenu">
             <div class="dropdown-menu-header">Coordinator & Staff Hub</div>
             <button id="openCheckinNavBtn" class="tool-dropdown-item" title="Stall 13 On-Campus Gate Check-in Desk">
@@ -159,7 +172,7 @@
       <div class="hero-content">
         <div class="hero-event-pill">
           <span class="pulse-dot"></span>
-          <span>GEETA UNIVERSITY & GEETA TECHNICAL HUB • 8 – 11 SEPTEMBER 2026</span>
+          <span>GEETA UNIVERSITY & GEETA TECHNICAL HUB • 21-24 SEPTEMBER 2026</span>
         </div>
 
         <h1 class="hero-title">
@@ -172,7 +185,9 @@
         </div>
 
         <p class="hero-subtitle">
-          Geeta University's flagship 4-day, internal hands-on technology exposure and career-readiness event. Move across <strong>3 Zones</strong> and <strong>12 Themed Stalls</strong> in small batches (~10 per group) to experience cutting-edge tech, build placement-ready skills, and unlock high-impact opportunities.
+          Geeta University's flagship 4-day, internal hands-on technology exposure and career-readiness event. Move
+          across <strong>3 Zones</strong> and <strong>12 Themed Stalls</strong> in small batches (~10 per group) to
+          experience cutting-edge tech, build placement-ready skills, and unlock high-impact opportunities.
         </p>
 
         <!-- Key Metrics Grid -->
@@ -218,7 +233,7 @@
         <!-- Live Countdown Timer to Sept 8, 2026 -->
         <div class="countdown-wrap">
           <div class="countdown-heading">
-            <span>⏱️</span> Event Countdown (Starts 8 Sept 2026, 9:30 AM):
+            <span>⏱️</span> Event Countdown (Starts 21 Sept 2026, 9:30 AM):
           </div>
           <div class="countdown-box">
             <div class="countdown-unit">
@@ -303,7 +318,9 @@
         <span class="section-kicker">1. EVENT OVERVIEW</span>
         <h2 class="section-title">What is G-Connect 2026?</h2>
         <p class="section-subtitle">
-          G-Connect 2026 is Geeta University's 4-day, internal, hands-on technology exposure and career-readiness event. It is organised around a 3-zone journey — EXPLORE, BUILD, CONNECT — through which students move in small, managed groups across 12 themed stalls.
+          G-Connect 2026 is Geeta University's 4-day, internal, hands-on technology exposure and career-readiness event.
+          It is organised around a 3-zone journey — EXPLORE, BUILD, CONNECT — through which students move in small,
+          managed groups across 12 themed stalls.
         </p>
       </div>
 
@@ -317,7 +334,9 @@
           </div>
         </div>
         <p class="phil-desc">
-          "Students should leave knowing: <strong>what technologies matter</strong>, <strong>what they can do</strong>, <strong>where to learn them</strong>, <strong>what skills to build</strong>, and <strong>how to connect these skills to careers and placements</strong>."
+          "Students should leave knowing: <strong>what technologies matter</strong>, <strong>what they can do</strong>,
+          <strong>where to learn them</strong>, <strong>what skills to build</strong>, and <strong>how to connect these
+            skills to careers and placements</strong>."
         </p>
       </div>
 
@@ -326,7 +345,7 @@
         <div class="day-card">
           <div class="day-card-header">
             <span class="day-badge">DAY 1</span>
-            <span class="day-date">8 Sept 2026</span>
+            <span class="day-date">21 Sept 2026</span>
           </div>
           <div class="day-audience-title">School of Computer Science & Engineering</div>
           <div class="day-audience-desc">B.Tech CSE, BCA & MCA Students (Finalized: 861 Students across 91 Groups)</div>
@@ -336,7 +355,7 @@
         <div class="day-card">
           <div class="day-card-header">
             <span class="day-badge">DAY 2</span>
-            <span class="day-date">9 Sept 2026</span>
+            <span class="day-date">22 Sept 2026</span>
           </div>
           <div class="day-audience-title">School of Engineering & Technology</div>
           <div class="day-audience-desc">ECE, Mechanical, Civil, AI/DS & Allied Technology Programs</div>
@@ -346,7 +365,7 @@
         <div class="day-card">
           <div class="day-card-header">
             <span class="day-badge">DAY 3</span>
-            <span class="day-date">10 Sept 2026</span>
+            <span class="day-date">23 Sept 2026</span>
           </div>
           <div class="day-audience-title">Management, Commerce & Allied Health</div>
           <div class="day-audience-desc">School of Management (BBA/MBA), Pharmacy, Allied Sciences & Humanities</div>
@@ -356,10 +375,11 @@
         <div class="day-card highlight-day-card">
           <div class="day-card-header">
             <span class="day-badge">DAY 4</span>
-            <span class="day-date">11 Sept 2026</span>
+            <span class="day-date">24 Sept 2026</span>
           </div>
           <div class="day-audience-title">External Institutions & +2 Schools</div>
-          <div class="day-audience-desc">Visiting Schools, External Colleges, Senior Secondary Delegations & Remaining Students</div>
+          <div class="day-audience-desc">Visiting Schools, External Colleges, Senior Secondary Delegations & Remaining
+            Students</div>
           <div class="day-slots-count">11 Slots (Pre-Booked Batches)</div>
         </div>
       </div>
@@ -388,7 +408,9 @@
           <div class="support-stall-tag">EVENT SUPPORT • NOT A ZONE STALL</div>
           <h3 class="support-stall-title">Stall No. 13: Central Registration & Help Desk</h3>
           <p class="support-stall-desc">
-            Manages participant registration via QR code, verify entries, assign slots and groups (~10 students/group), distribute physical & digital <strong>G-Connect Passports</strong>, and provide on-site coordinator assistance.
+            Manages participant registration via QR code, verify entries, assign slots and groups (~10 students/group),
+            distribute physical & digital <strong>G-Connect Passports</strong>, and provide on-site coordinator
+            assistance.
           </p>
         </div>
         <div class="support-stall-action">
@@ -407,7 +429,8 @@
         <span class="section-kicker">3. DIRECTORY OF STALLS</span>
         <h2 class="section-title">Explore the 12 Themed Stalls</h2>
         <p class="section-subtitle">
-          Each stall follows the 4-step framework: <strong>DISCOVER → EXPERIENCE → CHALLENGE → CONNECT</strong> (~30 min fast rotation).
+          Each stall follows the 4-step framework: <strong>DISCOVER → EXPERIENCE → CHALLENGE → CONNECT</strong> (~30 min
+          fast rotation).
         </p>
       </div>
 
@@ -492,23 +515,24 @@
         <span class="section-kicker">5. DAILY SCHEDULE MATRIX</span>
         <h2 class="section-title">Standardized 11-Slot Schedule (~30 Min / Slot)</h2>
         <p class="section-subtitle">
-          Effective across all 4 days (9:30 AM – 4:00 PM with Lunch/Reset at 12:30 PM). Below is the finalized Day 1 CSE Department working model (861 students across 91 groups).
+          Effective across all 4 days (9:30 AM – 4:00 PM with Lunch/Reset at 12:30 PM). Below is the finalized Day 1 CSE
+          Department working model (861 students across 91 groups).
         </p>
       </div>
 
       <!-- Day Switcher Tabs -->
       <div class="sched-day-tabs-wrap">
         <button class="sched-day-tab active" data-day="1">
-          <span>📅</span> Day 1 (8 Sept): CSE Department (Finalized)
+          <span>📅</span> Day 1 (21 Sept): CSE Department (Finalized)
         </button>
         <button class="sched-day-tab" data-day="2">
-          <span>📅</span> Day 2 (9 Sept): Engg & Tech (TBF)
+          <span>📅</span> Day 2 (22 Sept): Engg & Tech (TBF)
         </button>
         <button class="sched-day-tab" data-day="3">
-          <span>📅</span> Day 3 (10 Sept): Management & Allied (TBF)
+          <span>📅</span> Day 3 (23 Sept): Management & Allied (TBF)
         </button>
         <button class="sched-day-tab" data-day="4">
-          <span>📅</span> Day 4 (11 Sept): External Colleges & +2 (TBF)
+          <span>📅</span> Day 4 (24 Sept): External Colleges & +2 (TBF)
         </button>
       </div>
 
@@ -529,7 +553,9 @@
         <span class="section-kicker">6. REGISTRATION & DATA PORTAL</span>
         <h2 class="section-title">School Delegation & Student Registration</h2>
         <p class="section-subtitle">
-          Register your school's faculty coordinator and accompanying student delegation for <strong>G-Connect 2026</strong>. Each school automatically receives a dedicated sheet record, assigned slot & group, and digital boarding passes.
+          Register your school's faculty coordinator and accompanying student delegation for <strong>G-Connect
+            2026</strong>. Each school automatically receives a dedicated sheet record, assigned slot & group, and
+          digital boarding passes.
         </p>
       </div>
 
@@ -543,8 +569,11 @@
                 <div class="school-picker-title">
                   <span style="font-size:1.4rem;">🏛️</span>
                   <div>
-                    <strong style="display:block;font-size:1.05rem;color:#09090b;font-family:var(--font-heading);">School / Institution Selection</strong>
-                    <span style="font-size:0.75rem;color:#64748b;font-weight:600;">Choose an enrolled school or register a new school delegation</span>
+                    <strong
+                      style="display:block;font-size:1.05rem;color:#09090b;font-family:var(--font-heading);">School /
+                      Institution Selection</strong>
+                    <span style="font-size:0.75rem;color:#64748b;font-weight:600;">Choose an enrolled school or register
+                      a new school delegation</span>
                   </div>
                 </div>
               </div>
@@ -554,14 +583,17 @@
                 <label for="regSchoolSelect" style="font-size:0.85rem;font-weight:700;color:#334155;">
                   Select School / Institution <span class="req">*</span>
                 </label>
-                <select id="regSchoolSelect" class="form-select-lg" style="font-size:0.95rem;padding:0.8rem 1rem;font-weight:600;" required>
+                <select id="regSchoolSelect" class="form-select-lg"
+                  style="font-size:0.95rem;padding:0.8rem 1rem;font-weight:600;" required>
                   <option value="" disabled selected>-- Choose an Enrolled School or + Add New School --</option>
-                  <option value="__NEW_SCHOOL__" style="font-weight:700;color:#047857;">➕ + Add New School (Enter School & Principal Details)</option>
+                  <option value="__NEW_SCHOOL__" style="font-weight:700;color:#047857;">➕ + Add New School (Enter School
+                    & Principal Details)</option>
                 </select>
               </div>
 
               <!-- Confirmation banner when an existing school is picked -->
-              <div id="existingSchoolSelectedBanner" class="selected-school-summary-bar" style="display:none;margin-top:0.85rem;">
+              <div id="existingSchoolSelectedBanner" class="selected-school-summary-bar"
+                style="display:none;margin-top:0.85rem;">
                 <div class="selected-summary-left">
                   <span class="selected-badge">✓ ENROLLED SCHOOL SELECTED</span>
                   <div id="selectedSchoolNameDisplay" class="selected-school-name">School Name</div>
@@ -572,18 +604,23 @@
               </div>
 
               <!-- New School Details Block (ONLY SHOWN WHEN '+ Add New School' IS SELECTED) -->
-              <div id="newSchoolInputGroup" class="new-school-panel" style="display:none;margin-top:1rem;padding:1.25rem;background:#f0fdf4;border:1.5px dashed #10b981;border-radius:10px;">
+              <div id="newSchoolInputGroup" class="new-school-panel"
+                style="display:none;margin-top:1rem;padding:1.25rem;background:#f0fdf4;border:1.5px dashed #10b981;border-radius:10px;">
                 <div class="new-school-header" style="display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem;">
                   <span style="font-size:1.3rem;">✨</span>
                   <div>
-                    <strong style="color:#065f46;font-size:0.95rem;font-family:var(--font-heading);display:block;">Registering New School Delegation</strong>
-                    <span style="font-size:0.75rem;color:#047857;">Enter school and principal details once. Next time, this school will be selectable directly without asking principal details!</span>
+                    <strong
+                      style="color:#065f46;font-size:0.95rem;font-family:var(--font-heading);display:block;">Registering
+                      New School Delegation</strong>
+                    <span style="font-size:0.75rem;color:#047857;">Enter school and principal details once. Next time,
+                      this school will be selectable directly without asking principal details!</span>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="regNewSchoolName">School Full Name & Branch / Location <span class="req">*</span></label>
-                  <input type="text" id="regNewSchoolName" placeholder="e.g. Bal Vikas School, Model Town, Panipat" autocomplete="organization" style="font-weight:600;font-size:0.95rem;padding:0.75rem 1rem;">
+                  <input type="text" id="regNewSchoolName" placeholder="e.g. Bal Vikas School, Model Town, Panipat"
+                    autocomplete="organization" style="font-weight:600;font-size:0.95rem;padding:0.75rem 1rem;">
                 </div>
 
                 <div class="form-row-2" style="margin-top:0.75rem;">
@@ -640,7 +677,8 @@
                   <div class="section-subhead-title">
                     <span>👨‍🏫</span> 2. Faculty Coordinators / Teachers
                   </div>
-                  <span class="badge badge-cyan" id="teacherCountBadge" style="font-size:0.8rem;padding:0.3rem 0.75rem;">
+                  <span class="badge badge-cyan" id="teacherCountBadge"
+                    style="font-size:0.8rem;padding:0.3rem 0.75rem;">
                     1 Teacher Added
                   </span>
                 </div>
@@ -662,7 +700,8 @@
                   <div class="section-subhead-title">
                     <span>🎓</span> 3. Accompanying Students List
                   </div>
-                  <span class="badge badge-success" id="studentCountBadge" style="font-size:0.8rem;padding:0.3rem 0.75rem;">
+                  <span class="badge badge-success" id="studentCountBadge"
+                    style="font-size:0.8rem;padding:0.3rem 0.75rem;">
                     1 Student Added
                   </span>
                 </div>
@@ -734,7 +773,8 @@
               </div>
 
               <!-- Submit Button -->
-              <button type="submit" id="regSubmitBtn" class="btn btn-primary btn-lg btn-block" style="margin-top:0.75rem;">
+              <button type="submit" id="regSubmitBtn" class="btn btn-primary btn-lg btn-block"
+                style="margin-top:0.75rem;">
                 <span>🎫</span> Register School Delegation & Generate Digital Passes
               </button>
 
@@ -749,7 +789,9 @@
             <div id="schoolSelectPrompt" class="school-prompt-empty">
               <div style="font-size:2rem;margin-bottom:0.5rem;">🏛️</div>
               <div style="font-weight:700;font-size:0.95rem;color:#0f172a;">Please Select or Add a School Above</div>
-              <div style="font-size:0.8rem;color:#64748b;margin-top:0.25rem;">Choose an existing school from the dropdown or select <strong>+ Add New School</strong> to unlock faculty & student registration fields.</div>
+              <div style="font-size:0.8rem;color:#64748b;margin-top:0.25rem;">Choose an existing school from the
+                dropdown or select <strong>+ Add New School</strong> to unlock faculty & student registration fields.
+              </div>
             </div>
           </form>
         </div>
@@ -765,7 +807,8 @@
               <div class="flow-num-badge">1</div>
               <div>
                 <strong>Instant Digital Pass & QR Code</strong>
-                <p>Get a high-resolution boarding pass with your assigned Day, Slot Timing, and Group Number (~10 stds/group).</p>
+                <p>Get a high-resolution boarding pass with your assigned Day, Slot Timing, and Group Number (~10
+                  stds/group).</p>
               </div>
             </div>
 
@@ -773,7 +816,8 @@
               <div class="flow-num-badge">2</div>
               <div>
                 <strong>12-Stall Digital Passport</strong>
-                <p>Stamp your progress across all 12 themed stalls. Complete stalls to unlock your official G-Connect 2026 Certificate.</p>
+                <p>Stamp your progress across all 12 themed stalls. Complete stalls to unlock your official G-Connect
+                  2026 Certificate.</p>
               </div>
             </div>
 
@@ -781,7 +825,8 @@
               <div class="flow-num-badge">3</div>
               <div>
                 <strong>Campus Check-in at Stall 13</strong>
-                <p>On arrival, show your QR at Stall 13 (Registration Desk) for 1-second gate verification and group wristband.</p>
+                <p>On arrival, show your QR at Stall 13 (Registration Desk) for 1-second gate verification and group
+                  wristband.</p>
               </div>
             </div>
 
@@ -789,7 +834,8 @@
               <div class="flow-num-badge">4</div>
               <div>
                 <strong>Future Placement & COE Priority</strong>
-                <p>Your technical interests, GitHub, and LinkedIn profiles will be directly mapped for upcoming hackathons, COE batches, and placement drives.</p>
+                <p>Your technical interests, GitHub, and LinkedIn profiles will be directly mapped for upcoming
+                  hackathons, COE batches, and placement drives.</p>
               </div>
             </div>
           </div>
@@ -834,7 +880,7 @@
 
         <div class="contingency-col">
           <h3 class="rules-col-title"><span>🛡️</span> Technical Contingencies & Operations</h3>
-          
+
           <div class="contingency-card">
             <div class="plan-header plan-a">PLAN A: LIVE DEMONSTRATION</div>
             <p>Direct live interactive web apps, cloud CI/CD pipelines, live API multi-agents, and CTF sandboxes.</p>
@@ -842,12 +888,14 @@
 
           <div class="contingency-card">
             <div class="plan-header plan-b">PLAN B: LOCAL / OFFLINE DEMO</div>
-            <p>Isolated Docker containers, local LLMs (Ollama), offline Jupyter notebooks, and local VM attack-defense sandboxes.</p>
+            <p>Isolated Docker containers, local LLMs (Ollama), offline Jupyter notebooks, and local VM attack-defense
+              sandboxes.</p>
           </div>
 
           <div class="contingency-card">
             <div class="plan-header plan-c">PLAN C: RECORDED / PRESENTATION</div>
-            <p>Pre-recorded 4K walkthrough videos, interactive screenshots, and case study infographic display boards.</p>
+            <p>Pre-recorded 4K walkthrough videos, interactive screenshots, and case study infographic display boards.
+            </p>
           </div>
 
           <div class="coord-actions-box">
@@ -875,7 +923,9 @@
             <span class="faq-chevron">▼</span>
           </button>
           <div class="faq-answer">
-            <p>To maximize departmental throughput and hands-on engagement, each day is organized into 11 slots of ~30 minutes each (9:30 AM to 4:00 PM with a Lunch/Reset break from 12:30 to 1:30 PM). Within each slot, students are organized into small groups of ~10 (G1, G2, G3...) for fast stall rotations.</p>
+            <p>To maximize departmental throughput and hands-on engagement, each day is organized into 11 slots of ~30
+              minutes each (9:30 AM to 4:00 PM with a Lunch/Reset break from 12:30 to 1:30 PM). Within each slot,
+              students are organized into small groups of ~10 (G1, G2, G3...) for fast stall rotations.</p>
           </div>
         </div>
 
@@ -885,7 +935,9 @@
             <span class="faq-chevron">▼</span>
           </button>
           <div class="faq-answer">
-            <p>Every stall follows the sequence: <strong>DISCOVER</strong> (introduction to technology), <strong>EXPERIENCE</strong> (live in-house project demo), <strong>CHALLENGE</strong> (interactive 2-min task/quiz), and <strong>CONNECT</strong> (career pathways and campus COE links).</p>
+            <p>Every stall follows the sequence: <strong>DISCOVER</strong> (introduction to technology),
+              <strong>EXPERIENCE</strong> (live in-house project demo), <strong>CHALLENGE</strong> (interactive 2-min
+              task/quiz), and <strong>CONNECT</strong> (career pathways and campus COE links).</p>
           </div>
         </div>
 
@@ -895,7 +947,9 @@
             <span class="faq-chevron">▼</span>
           </button>
           <div class="faq-answer">
-            <p>Upon registration, every student receives a digital passport. As you visit each of the 12 themed stalls across Zone 1, Zone 2, and Zone 3, you collect digital checkpoint stamps. Visiting 6+ stalls unlocks your official Geeta University G-Connect 2026 Certificate of Participation!</p>
+            <p>Upon registration, every student receives a digital passport. As you visit each of the 12 themed stalls
+              across Zone 1, Zone 2, and Zone 3, you collect digital checkpoint stamps. Visiting 6+ stalls unlocks your
+              official Geeta University G-Connect 2026 Certificate of Participation!</p>
           </div>
         </div>
 
@@ -905,7 +959,10 @@
             <span class="faq-chevron">▼</span>
           </button>
           <div class="faq-answer">
-            <p>Registration is open exclusively for <strong>School Students</strong> and <strong>Faculty of the School</strong> across all university schools & departments. Students receive an instant digital entry pass, group allocation, and 12-stall passport, while faculty members receive official mentorship & coordinator passes.</p>
+            <p>Registration is open exclusively for <strong>School Students</strong> and <strong>Faculty of the
+                School</strong> across all university schools & departments. Students receive an instant digital entry
+              pass, group allocation, and 12-stall passport, while faculty members receive official mentorship &
+              coordinator passes.</p>
           </div>
         </div>
       </div>
@@ -926,7 +983,7 @@
           <span class="brand-sub">Geeta University • Geeta Technical Hub</span>
         </div>
         <p class="footer-tagline">
-          "EXPLORE – BUILD – CONNECT" • 8 – 11 September 2026<br>
+          "EXPLORE – BUILD – CONNECT" • 21 – 24 September 2026<br>
           Technology • Career Readiness • Opportunities
         </p>
       </div>
@@ -978,7 +1035,7 @@
   <div class="modal-overlay" id="ticketModal">
     <div class="modal-card modal-ticket">
       <button class="modal-close" id="closePassModalBtn">&times;</button>
-      
+
       <div id="printablePassCard" class="pass-boarding-card">
         <div class="pass-card-top">
           <div class="pass-brand-left">
@@ -1027,8 +1084,8 @@
         <div class="pass-card-bottom">
           <div class="pass-zone-route">
             <span>ROUTE:</span>
-            <span class="text-cyan">Zone 1 (Explore)</span> ➔ 
-            <span class="text-amber">Zone 2 (Build)</span> ➔ 
+            <span class="text-cyan">Zone 1 (Explore)</span> ➔
+            <span class="text-amber">Zone 2 (Build)</span> ➔
             <span class="text-emerald">Zone 3 (Connect)</span>
           </div>
           <div id="passRolePill" class="pass-role-tag">Geeta University Student</div>
@@ -1054,7 +1111,7 @@
   <div class="modal-overlay" id="passportModal">
     <div class="modal-card modal-lg modal-passport">
       <button class="modal-close" id="closePassportModalBtn">&times;</button>
-      
+
       <div class="passport-header">
         <div style="font-size:2.5rem;">📖</div>
         <div>
@@ -1069,7 +1126,8 @@
       <div class="passport-progress-card">
         <div class="progress-info">
           <span>12 Themed Stalls Journey</span>
-          <span id="passportProgressCount" style="font-weight:700;color:var(--accent-green);">0 / 12 Stalls Verified</span>
+          <span id="passportProgressCount" style="font-weight:700;color:var(--accent-green);">0 / 12 Stalls
+            Verified</span>
         </div>
         <div class="progress-track">
           <div class="progress-fill" id="passportProgressBar" style="width: 0%;"></div>
@@ -1079,7 +1137,8 @@
       <!-- Certificate Unlock Banner -->
       <div class="cert-unlock-banner" id="passportCertUnlockBanner" style="display:none;">
         <div>
-          <strong>🎉 Milestone Achieved!</strong> You have verified 6+ stalls and unlocked your Official Participation Certificate!
+          <strong>🎉 Milestone Achieved!</strong> You have verified 6+ stalls and unlocked your Official Participation
+          Certificate!
         </div>
         <button class="btn btn-primary btn-sm" onclick="TicketGenerator.generateCertificate()">
           🎓 View & Download Certificate
@@ -1096,8 +1155,9 @@
   <!-- 4. OFFICIAL PARTICIPATION CERTIFICATE MODAL -->
   <div class="modal-overlay" id="certificateModal">
     <div class="modal-card modal-lg">
-      <button class="modal-close" onclick="document.getElementById('certificateModal').classList.remove('open')">&times;</button>
-      
+      <button class="modal-close"
+        onclick="document.getElementById('certificateModal').classList.remove('open')">&times;</button>
+
       <div class="certificate-frame" id="printableCertificate">
         <div class="cert-inner-border">
           <div class="cert-header">
@@ -1110,10 +1170,13 @@
           <div class="cert-body">
             <p>This is to certify that</p>
             <h2 class="cert-name" id="certHolderName">Aarav Sharma</h2>
-            <p>Bearing Student / Roll ID: <strong id="certHolderId">GU23CSE0142</strong> (<span id="certHolderDept">School of Computer Science & Engineering</span>)</p>
-            <p>has actively participated in <strong>G-Connect 2026</strong>, completing hands-on demonstrations and technical challenges across:</p>
+            <p>Bearing Student / Roll ID: <strong id="certHolderId">GU23CSE0142</strong> (<span
+                id="certHolderDept">School of Computer Science & Engineering</span>)</p>
+            <p>has actively participated in <strong>G-Connect 2026</strong>, completing hands-on demonstrations and
+              technical challenges across:</p>
             <div class="cert-stall-count" id="certStallCount">12 Themed Stalls Completed</div>
-            <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.5rem;">EXPLORE (Future Tech) • BUILD (Career Readiness) • CONNECT (Opportunities)</p>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.5rem;">EXPLORE (Future Tech) • BUILD
+              (Career Readiness) • CONNECT (Opportunities)</p>
           </div>
 
           <div class="cert-footer">
@@ -1145,20 +1208,23 @@
   <div class="modal-overlay" id="checkinDeskModal">
     <div class="modal-card modal-lg">
       <button class="modal-close" onclick="AdminDashboard.closeCheckinModal()">&times;</button>
-      
+
       <div class="checkin-modal-header">
         <div style="font-size:2.2rem;">🔍</div>
         <div>
           <span class="stall-number-pill">STALL #13 CENTRAL DESK</span>
           <h2 style="font-size:1.5rem;margin-top:0.2rem;">On-Campus Gate Check-In & Scanner</h2>
-          <div style="font-size:0.85rem;color:var(--text-muted);">Instant Student Roll ID / QR Verification & Group Wristband Issuance</div>
+          <div style="font-size:0.85rem;color:var(--text-muted);">Instant Student Roll ID / QR Verification & Group
+            Wristband Issuance</div>
         </div>
       </div>
 
       <!-- Live Search Bar -->
       <div class="checkin-search-wrap">
-        <input type="text" id="checkinSearchInput" class="checkin-search-input" placeholder="Type Student Roll ID (e.g. GU23CSE0142), Reg ID, or Phone..." autofocus>
-        <button class="btn btn-primary" onclick="AdminDashboard.handleCheckinSearch(document.getElementById('checkinSearchInput').value)">
+        <input type="text" id="checkinSearchInput" class="checkin-search-input"
+          placeholder="Type Student Roll ID (e.g. GU23CSE0142), Reg ID, or Phone..." autofocus>
+        <button class="btn btn-primary"
+          onclick="AdminDashboard.handleCheckinSearch(document.getElementById('checkinSearchInput').value)">
           Verify Entry
         </button>
       </div>
@@ -1167,7 +1233,8 @@
       <div id="checkinSearchResultBox" class="checkin-result-wrap">
         <div class="checkin-empty-state">
           <div style="font-size:2.5rem;margin-bottom:0.5rem;">🔍</div>
-          <p>Scan entry QR code or type Student Roll No / Registration ID (e.g. <code>GU23CSE0142</code> or <code>GC-2026-1042</code>)</p>
+          <p>Scan entry QR code or type Student Roll No / Registration ID (e.g. <code>GU23CSE0142</code> or
+            <code>GC-2026-1042</code>)</p>
         </div>
       </div>
 
@@ -1183,12 +1250,13 @@
   <div class="modal-overlay" id="adminModal">
     <div class="modal-card modal-xl">
       <button class="modal-close" onclick="AdminDashboard.closeAdminModal()">&times;</button>
-      
+
       <div class="admin-modal-header">
         <div>
           <span class="badge badge-purple">TALENT VAULT & PLACEMENT ANALYTICS</span>
           <h2 style="font-size:1.6rem;margin-top:0.25rem;">G-Connect Student Database</h2>
-          <div style="font-size:0.85rem;color:var(--text-muted);">Future skill tracking, GitHub/LinkedIn portfolios, and slot attendance records.</div>
+          <div style="font-size:0.85rem;color:var(--text-muted);">Future skill tracking, GitHub/LinkedIn portfolios, and
+            slot attendance records.</div>
         </div>
         <div style="display:flex;gap:0.75rem;">
           <button class="btn btn-primary btn-sm" id="exportCsvBtn">
@@ -1199,8 +1267,9 @@
 
       <!-- Filters Row -->
       <div class="admin-filters-bar">
-        <input type="text" id="adminSearchInput" class="admin-search-input" placeholder="Search by name, roll no, email, department...">
-        
+        <input type="text" id="adminSearchInput" class="admin-search-input"
+          placeholder="Search by name, roll no, email, department...">
+
         <select id="adminDeptFilter" class="admin-select-filter">
           <option value="all">All Departments / Programs</option>
           <option value="CSE">Computer Science (CSE / BCA / MCA)</option>
@@ -1256,11 +1325,12 @@
   <div class="modal-overlay" id="coordinatorModal">
     <div class="modal-card modal-lg">
       <button class="modal-close" onclick="AdminDashboard.closeCoordinatorModal()">&times;</button>
-      
+
       <div style="margin-bottom:1.5rem;">
         <span class="badge badge-amber">COORDINATOR COMMAND HUB</span>
         <h2 style="font-size:1.6rem;margin-top:0.25rem;">Daily Coordinator Checklists & Rules</h2>
-        <p style="color:var(--text-muted);font-size:0.9rem;">Interactive checklist for Faculty Stall Leads and Student Coordinators across all 4 days.</p>
+        <p style="color:var(--text-muted);font-size:0.9rem;">Interactive checklist for Faculty Stall Leads and Student
+          Coordinators across all 4 days.</p>
       </div>
 
       <div id="coordChecklistItems" class="coord-checklists-container">
@@ -1273,16 +1343,18 @@
   <div class="modal-overlay" id="webhookSettingsModal">
     <div class="modal-card modal-md">
       <button class="modal-close" onclick="AdminDashboard.closeWebhookModal()">&times;</button>
-      
+
       <div style="margin-bottom:1.25rem;">
         <div style="font-size:2.2rem;">⚙️</div>
         <h2 style="font-size:1.4rem;margin-top:0.25rem;">Google Sheets Webhook Sync</h2>
-        <p style="color:var(--text-muted);font-size:0.88rem;">Sync all student registrations in real-time to your Google Sheet.</p>
+        <p style="color:var(--text-muted);font-size:0.88rem;">Sync all student registrations in real-time to your Google
+          Sheet.</p>
       </div>
 
       <div class="form-group" style="margin-bottom:1.25rem;">
         <label for="webhookUrlInput">Google Apps Script Web App URL:</label>
-        <input type="url" id="webhookUrlInput" placeholder="https://script.google.com/macros/s/AKfycbx.../exec" style="font-size:0.85rem;">
+        <input type="url" id="webhookUrlInput" placeholder="https://script.google.com/macros/s/AKfycbx.../exec"
+          style="font-size:0.85rem;">
         <small style="color:var(--text-muted);display:block;margin-top:0.35rem;">
           Must start with <code>https://script.google.com/macros/s/</code> with access set to 'Anyone'.
         </small>
@@ -1306,4 +1378,5 @@
   <script src="js/admin-dashboard.js"></script>
   <script src="js/app.js"></script>
 </body>
+
 </html>
