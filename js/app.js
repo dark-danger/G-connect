@@ -24,10 +24,10 @@ const App = {
   },
 
   /* ------------------------------------------------------------------------
-     1. COUNTDOWN TIMER TO SEPT 8, 2026
+     1. COUNTDOWN TIMER TO SEPT 21, 2026
      ------------------------------------------------------------------------ */
   initCountdown() {
-    const eventDate = new Date("2026-09-08T09:30:00+05:30").getTime();
+    const eventDate = new Date("2026-09-21T09:30:00+05:30").getTime();
 
     const updateTimer = () => {
       const now = new Date().getTime();

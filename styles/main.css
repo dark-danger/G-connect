@@ -541,7 +541,7 @@ body {
 
 .event-year-pill {
   background: linear-gradient(135deg, #059669 0%, #10b981 100%);
-  color: #ffffff;
+  color: whitesmoke;
   font-size: 0.66rem;
   font-weight: 800;
   padding: 0.15rem 0.45rem;
